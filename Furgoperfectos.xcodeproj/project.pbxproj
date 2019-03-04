@@ -11,6 +11,8 @@
 		48429234222DACF1002B2C2C /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429233222DACF1002B2C2C /* MapViewModel.swift */; };
 		48429237222DAD2E002B2C2C /* MapRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429236222DAD2E002B2C2C /* MapRepository.swift */; };
 		48429239222DAD3F002B2C2C /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429238222DAD3F002B2C2C /* MapModel.swift */; };
+		4842923B222DBE12002B2C2C /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4842923A222DBE12002B2C2C /* APIEndpoints.swift */; };
+		4842923D222DBF0A002B2C2C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4842923C222DBF0A002B2C2C /* README.md */; };
 		48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF531A222DA3F000C4F911 /* AppDelegate.swift */; };
 		48CF531D222DA3F000C4F911 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF531C222DA3F000C4F911 /* MapViewController.swift */; };
 		48CF5320222DA3F000C4F911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CF531E222DA3F000C4F911 /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		48429233222DACF1002B2C2C /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		48429236222DAD2E002B2C2C /* MapRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepository.swift; sourceTree = "<group>"; };
 		48429238222DAD3F002B2C2C /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		4842923A222DBE12002B2C2C /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		4842923C222DBF0A002B2C2C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		48CF5317222DA3F000C4F911 /* Furgoperfectos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furgoperfectos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CF531A222DA3F000C4F911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48CF531C222DA3F000C4F911 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 		48CF530E222DA3F000C4F911 = {
 			isa = PBXGroup;
 			children = (
+				4842923C222DBF0A002B2C2C /* README.md */,
 				48CF5319222DA3F000C4F911 /* Furgoperfectos */,
 				48CF532E222DA3F200C4F911 /* FurgoperfectosTests */,
 				48CF5339222DA3F200C4F911 /* FurgoperfectosUITests */,
@@ -168,6 +173,7 @@
 				48CF5321222DA3F200C4F911 /* Assets.xcassets */,
 				48CF5323222DA3F200C4F911 /* LaunchScreen.storyboard */,
 				48CF5326222DA3F200C4F911 /* Info.plist */,
+				4842923A222DBE12002B2C2C /* APIEndpoints.swift */,
 			);
 			path = Furgoperfectos;
 			sourceTree = "<group>";
@@ -228,7 +234,6 @@
 				94A6A07D6799E9AA29378D42 /* Pods-FurgoperfectosUITests.debug.xcconfig */,
 				61ACBD92EC4BC09E1C5B1DCC /* Pods-FurgoperfectosUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -352,6 +357,7 @@
 			files = (
 				48CF5325222DA3F200C4F911 /* LaunchScreen.storyboard in Resources */,
 				48CF5322222DA3F200C4F911 /* Assets.xcassets in Resources */,
+				4842923D222DBF0A002B2C2C /* README.md in Resources */,
 				48CF5320222DA3F000C4F911 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48429232222DACD5002B2C2C /* ListTableViewController.swift in Sources */,
+				4842923B222DBE12002B2C2C /* APIEndpoints.swift in Sources */,
 				48CF531D222DA3F000C4F911 /* MapViewController.swift in Sources */,
 				48429237222DAD2E002B2C2C /* MapRepository.swift in Sources */,
 				48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */,
