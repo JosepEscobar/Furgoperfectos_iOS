@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF531A222DA3F000C4F911 /* AppDelegate.swift */; };
-		48CF531D222DA3F000C4F911 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF531C222DA3F000C4F911 /* ViewController.swift */; };
+		48CF531D222DA3F000C4F911 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF531C222DA3F000C4F911 /* MapViewController.swift */; };
 		48CF5320222DA3F000C4F911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CF531E222DA3F000C4F911 /* Main.storyboard */; };
 		48CF5322222DA3F200C4F911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48CF5321222DA3F200C4F911 /* Assets.xcassets */; };
 		48CF5325222DA3F200C4F911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CF5323222DA3F200C4F911 /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		48CF5317222DA3F000C4F911 /* Furgoperfectos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furgoperfectos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CF531A222DA3F000C4F911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48CF531C222DA3F000C4F911 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48CF531C222DA3F000C4F911 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		48CF531F222DA3F000C4F911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48CF5321222DA3F200C4F911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48CF5324222DA3F200C4F911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 		48CF5319222DA3F000C4F911 /* Furgoperfectos */ = {
 			isa = PBXGroup;
 			children = (
+				48CF5348222DA4A400C4F911 /* Features */,
 				48CF531A222DA3F000C4F911 /* AppDelegate.swift */,
-				48CF531C222DA3F000C4F911 /* ViewController.swift */,
 				48CF531E222DA3F000C4F911 /* Main.storyboard */,
 				48CF5321222DA3F200C4F911 /* Assets.xcassets */,
 				48CF5323222DA3F200C4F911 /* LaunchScreen.storyboard */,
@@ -123,6 +123,30 @@
 				48CF533C222DA3F200C4F911 /* Info.plist */,
 			);
 			path = FurgoperfectosUITests;
+			sourceTree = "<group>";
+		};
+		48CF5348222DA4A400C4F911 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				48CF5349222DA4A900C4F911 /* MapView */,
+				48CF534A222DA4B300C4F911 /* ListView */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		48CF5349222DA4A900C4F911 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				48CF531C222DA3F000C4F911 /* MapViewController.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		48CF534A222DA4B300C4F911 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48CF531D222DA3F000C4F911 /* ViewController.swift in Sources */,
+				48CF531D222DA3F000C4F911 /* MapViewController.swift in Sources */,
 				48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,15 +456,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25Z7VXYCRL;
+				DEVELOPMENT_TEAM = DQZ7G5MLVC;
 				INFOPLIST_FILE = Furgoperfectos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.josepescobar.Furgoperfectos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josepescobar.furgoperfectos.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,15 +477,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25Z7VXYCRL;
+				DEVELOPMENT_TEAM = DQZ7G5MLVC;
 				INFOPLIST_FILE = Furgoperfectos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.josepescobar.Furgoperfectos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josepescobar.furgoperfectos.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
