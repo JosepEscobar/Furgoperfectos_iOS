@@ -17,13 +17,41 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="furgtransparente" translatesAutoresizingMaskIntoConstraints="NO" id="Xqr-Ac-RbN">
+                                <rect key="frame" x="20" y="219.5" width="335" height="228"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="228" id="YiN-P4-RHo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aplicación creada por Josep Escobar con el soporte de furgovw.org" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7qz-w8-ZU6">
+                                <rect key="frame" x="8" y="638" width="359" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KtB-3v-z4c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.6588235294" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xqr-Ac-RbN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="10v-Wq-7kO"/>
+                            <constraint firstItem="7qz-w8-ZU6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="6XB-HC-rvf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7qz-w8-ZU6" secondAttribute="trailing" constant="8" id="Ufb-ew-Jq4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xqr-Ac-RbN" secondAttribute="trailing" constant="20" id="XqE-Jc-KaW"/>
+                            <constraint firstItem="Xqr-Ac-RbN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lGP-JJ-oq9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7qz-w8-ZU6" secondAttribute="bottom" constant="8" id="wGD-Ew-wmk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="furgtransparente" width="1334" height="1334"/>
+    </resources>
 </document>

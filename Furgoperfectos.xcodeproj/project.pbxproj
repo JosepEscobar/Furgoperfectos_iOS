@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48429232222DACD5002B2C2C /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429231222DACD5002B2C2C /* ListTableViewController.swift */; };
+		48429234222DACF1002B2C2C /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429233222DACF1002B2C2C /* MapViewModel.swift */; };
+		48429237222DAD2E002B2C2C /* MapRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429236222DAD2E002B2C2C /* MapRepository.swift */; };
+		48429239222DAD3F002B2C2C /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429238222DAD3F002B2C2C /* MapModel.swift */; };
 		48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF531A222DA3F000C4F911 /* AppDelegate.swift */; };
 		48CF531D222DA3F000C4F911 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF531C222DA3F000C4F911 /* MapViewController.swift */; };
 		48CF5320222DA3F000C4F911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CF531E222DA3F000C4F911 /* Main.storyboard */; };
@@ -14,6 +18,9 @@
 		48CF5325222DA3F200C4F911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CF5323222DA3F200C4F911 /* LaunchScreen.storyboard */; };
 		48CF5330222DA3F200C4F911 /* FurgoperfectosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF532F222DA3F200C4F911 /* FurgoperfectosTests.swift */; };
 		48CF533B222DA3F200C4F911 /* FurgoperfectosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF533A222DA3F200C4F911 /* FurgoperfectosUITests.swift */; };
+		8E2201F11CD614DE12477E25 /* Pods_Furgoperfectos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D98C91ACC8B420FF2C948A /* Pods_Furgoperfectos.framework */; };
+		B09C47FDEDDF978D2F009E7C /* Pods_FurgoperfectosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC624CB25992E15562FDB6D /* Pods_FurgoperfectosUITests.framework */; };
+		E171B03D6532236DC6D59ECE /* Pods_FurgoperfectosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332E3991FE8ECE768317382A /* Pods_FurgoperfectosTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03D98C91ACC8B420FF2C948A /* Pods_Furgoperfectos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Furgoperfectos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC624CB25992E15562FDB6D /* Pods_FurgoperfectosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurgoperfectosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		332E3991FE8ECE768317382A /* Pods_FurgoperfectosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurgoperfectosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48429231222DACD5002B2C2C /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		48429233222DACF1002B2C2C /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		48429236222DAD2E002B2C2C /* MapRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepository.swift; sourceTree = "<group>"; };
+		48429238222DAD3F002B2C2C /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		48CF5317222DA3F000C4F911 /* Furgoperfectos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furgoperfectos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CF531A222DA3F000C4F911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48CF531C222DA3F000C4F911 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +61,12 @@
 		48CF5336222DA3F200C4F911 /* FurgoperfectosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FurgoperfectosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CF533A222DA3F200C4F911 /* FurgoperfectosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectosUITests.swift; sourceTree = "<group>"; };
 		48CF533C222DA3F200C4F911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FDBD3D9007C63628CD0B37C /* Pods-Furgoperfectos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Furgoperfectos.debug.xcconfig"; path = "Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos.debug.xcconfig"; sourceTree = "<group>"; };
+		61ACBD92EC4BC09E1C5B1DCC /* Pods-FurgoperfectosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurgoperfectosUITests.release.xcconfig"; path = "Target Support Files/Pods-FurgoperfectosUITests/Pods-FurgoperfectosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8D06E6B50F95F956C69137AE /* Pods-Furgoperfectos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Furgoperfectos.release.xcconfig"; path = "Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos.release.xcconfig"; sourceTree = "<group>"; };
+		94A6A07D6799E9AA29378D42 /* Pods-FurgoperfectosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurgoperfectosUITests.debug.xcconfig"; path = "Target Support Files/Pods-FurgoperfectosUITests/Pods-FurgoperfectosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1CBC70DCB630850D05BE956 /* Pods-FurgoperfectosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurgoperfectosTests.release.xcconfig"; path = "Target Support Files/Pods-FurgoperfectosTests/Pods-FurgoperfectosTests.release.xcconfig"; sourceTree = "<group>"; };
+		E08724FC34810B8366F4042D /* Pods-FurgoperfectosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurgoperfectosTests.debug.xcconfig"; path = "Target Support Files/Pods-FurgoperfectosTests/Pods-FurgoperfectosTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2201F11CD614DE12477E25 /* Pods_Furgoperfectos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E171B03D6532236DC6D59ECE /* Pods_FurgoperfectosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B09C47FDEDDF978D2F009E7C /* Pods_FurgoperfectosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +108,7 @@
 		4842922E222DAC45002B2C2C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				48429233222DACF1002B2C2C /* MapViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -92,15 +116,25 @@
 		4842922F222DAC52002B2C2C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				48429235222DACFD002B2C2C /* API Client */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		48429230222DAC6A002B2C2C /* Models */ = {
+		48429230222DAC6A002B2C2C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				48429238222DAD3F002B2C2C /* MapModel.swift */,
 			);
-			path = Models;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48429235222DACFD002B2C2C /* API Client */ = {
+			isa = PBXGroup;
+			children = (
+				48429236222DAD2E002B2C2C /* MapRepository.swift */,
+			);
+			path = "API Client";
 			sourceTree = "<group>";
 		};
 		48CF530E222DA3F000C4F911 = {
@@ -110,6 +144,8 @@
 				48CF532E222DA3F200C4F911 /* FurgoperfectosTests */,
 				48CF5339222DA3F200C4F911 /* FurgoperfectosUITests */,
 				48CF5318222DA3F000C4F911 /* Products */,
+				CEBFEE76D082FC8DE84AECDF /* Pods */,
+				FA30673C5385D9FD80E1905F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,7 +202,7 @@
 		48CF5349222DA4A900C4F911 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
-				48429230222DAC6A002B2C2C /* Models */,
+				48429230222DAC6A002B2C2C /* Model */,
 				4842922F222DAC52002B2C2C /* Repository */,
 				4842922E222DAC45002B2C2C /* ViewModel */,
 				4842922D222DAC3A002B2C2C /* Controller */,
@@ -177,8 +213,33 @@
 		48CF534A222DA4B300C4F911 /* ListView */ = {
 			isa = PBXGroup;
 			children = (
+				48429231222DACD5002B2C2C /* ListTableViewController.swift */,
 			);
 			path = ListView;
+			sourceTree = "<group>";
+		};
+		CEBFEE76D082FC8DE84AECDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FDBD3D9007C63628CD0B37C /* Pods-Furgoperfectos.debug.xcconfig */,
+				8D06E6B50F95F956C69137AE /* Pods-Furgoperfectos.release.xcconfig */,
+				E08724FC34810B8366F4042D /* Pods-FurgoperfectosTests.debug.xcconfig */,
+				C1CBC70DCB630850D05BE956 /* Pods-FurgoperfectosTests.release.xcconfig */,
+				94A6A07D6799E9AA29378D42 /* Pods-FurgoperfectosUITests.debug.xcconfig */,
+				61ACBD92EC4BC09E1C5B1DCC /* Pods-FurgoperfectosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA30673C5385D9FD80E1905F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03D98C91ACC8B420FF2C948A /* Pods_Furgoperfectos.framework */,
+				332E3991FE8ECE768317382A /* Pods_FurgoperfectosTests.framework */,
+				2EC624CB25992E15562FDB6D /* Pods_FurgoperfectosUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48CF533F222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "Furgoperfectos" */;
 			buildPhases = (
+				FF6CF8D3C8E1AF56F3A989EF /* [CP] Check Pods Manifest.lock */,
 				48CF5313222DA3F000C4F911 /* Sources */,
 				48CF5314222DA3F000C4F911 /* Frameworks */,
 				48CF5315222DA3F000C4F911 /* Resources */,
+				738D4BA77E0AC71A8939C67A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48CF5342222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "FurgoperfectosTests" */;
 			buildPhases = (
+				DE17519275B32B29B6A8EAF1 /* [CP] Check Pods Manifest.lock */,
 				48CF5327222DA3F200C4F911 /* Sources */,
 				48CF5328222DA3F200C4F911 /* Frameworks */,
 				48CF5329222DA3F200C4F911 /* Resources */,
@@ -223,6 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48CF5345222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "FurgoperfectosUITests" */;
 			buildPhases = (
+				B3DF7CA1D2017E765C07819A /* [CP] Check Pods Manifest.lock */,
 				48CF5332222DA3F200C4F911 /* Sources */,
 				48CF5333222DA3F200C4F911 /* Frameworks */,
 				48CF5334222DA3F200C4F911 /* Resources */,
@@ -307,13 +372,112 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		738D4BA77E0AC71A8939C67A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3DF7CA1D2017E765C07819A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FurgoperfectosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE17519275B32B29B6A8EAF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FurgoperfectosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF6CF8D3C8E1AF56F3A989EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Furgoperfectos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		48CF5313222DA3F000C4F911 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48429232222DACD5002B2C2C /* ListTableViewController.swift in Sources */,
 				48CF531D222DA3F000C4F911 /* MapViewController.swift in Sources */,
+				48429237222DAD2E002B2C2C /* MapRepository.swift in Sources */,
 				48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */,
+				48429239222DAD3F002B2C2C /* MapModel.swift in Sources */,
+				48429234222DACF1002B2C2C /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +650,7 @@
 		};
 		48CF5340222DA3F200C4F911 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FDBD3D9007C63628CD0B37C /* Pods-Furgoperfectos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -507,6 +672,7 @@
 		};
 		48CF5341222DA3F200C4F911 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D06E6B50F95F956C69137AE /* Pods-Furgoperfectos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -528,6 +694,7 @@
 		};
 		48CF5343222DA3F200C4F911 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E08724FC34810B8366F4042D /* Pods-FurgoperfectosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -549,6 +716,7 @@
 		};
 		48CF5344222DA3F200C4F911 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1CBC70DCB630850D05BE956 /* Pods-FurgoperfectosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -570,6 +738,7 @@
 		};
 		48CF5346222DA3F200C4F911 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94A6A07D6799E9AA29378D42 /* Pods-FurgoperfectosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -590,6 +759,7 @@
 		};
 		48CF5347222DA3F200C4F911 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61ACBD92EC4BC09E1C5B1DCC /* Pods-FurgoperfectosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
