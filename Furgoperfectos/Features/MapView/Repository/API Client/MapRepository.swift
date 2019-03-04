@@ -9,5 +9,9 @@
 import UIKit
 
 class MapRepository: NSObject {
+    
+    func fetchData() {
+        
+    }
 
 }
