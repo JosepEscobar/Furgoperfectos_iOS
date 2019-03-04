@@ -74,6 +74,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4842922D222DAC3A002B2C2C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48CF531C222DA3F000C4F911 /* MapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4842922E222DAC45002B2C2C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4842922F222DAC52002B2C2C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		48429230222DAC6A002B2C2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		48CF530E222DA3F000C4F911 = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +166,10 @@
 		48CF5349222DA4A900C4F911 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
-				48CF531C222DA3F000C4F911 /* MapViewController.swift */,
+				48429230222DAC6A002B2C2C /* Models */,
+				4842922F222DAC52002B2C2C /* Repository */,
+				4842922E222DAC45002B2C2C /* ViewModel */,
+				4842922D222DAC3A002B2C2C /* Controller */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
