@@ -1,17 +1,21 @@
 //
-//  MapViewModel.swift
+//  ListViewModel.swift
 //  Furgoperfectos
 //
-//  Created by Josep Escobar on 04/03/2019.
+//  Created by Josep Escobar on 12/03/2019.
 //  Copyright © 2019 Josep Escobar. All rights reserved.
 //
 
 import UIKit
 
-class MapViewModel: NSObject {
+class ListViewModel: NSObject {
     
     var numberOfFurgoperfectos: Int {
         return FurgoperfectosRepository.shared.arrayFurgoperfectos.count
+    }
+    
+    func getName(index: Int) -> String {
+        return FurgoperfectosRepository.shared.arrayFurgoperfectos[index].nombre ?? ""
     }
     
     // Fetch Data from source
@@ -43,7 +47,6 @@ class MapViewModel: NSObject {
         }) { (error) in
             // do something
         }
-        
         
     }
 
