@@ -9,6 +9,8 @@
 import UIKit
 
 class ListTableViewController: UITableViewController {
+    
+    var listViewModel = ListViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,28 +21,40 @@ class ListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    override func viewWillAppear(_ animated: Bool) {
+        fetchData()
+    }
+    
+    func fetchData() {
+        listViewModel.fetchData(success: {
+            //
+            self.tableView.reloadData()
+        }, networkFailure: { (error) in
+            
+        }, serverFailure: { (error) in
+            
+        }, businessFailure: { (error) in
+            
+        }) { (error) in
+            
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return listViewModel.numberOfFurgoperfectos
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listReuseIdentifier", for: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = listViewModel.getName(index: indexPath.row)
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
