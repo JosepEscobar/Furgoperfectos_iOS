@@ -73,19 +73,8 @@ extension UIImage {
 }
 
 extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int) {
-        self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: 1)
-    }
-    class var green: UIColor { return UIColor(red: 76, green: 217, blue: 100) }
-    class var blue: UIColor { return UIColor(red: 0, green: 122, blue: 255) }
-}
-
-extension MKMapView {
-    func annotationView<T: MKAnnotationView>(of type: T.Type, annotation: MKAnnotation?, reuseIdentifier: String) -> T {
-        guard let annotationView = dequeueReusableAnnotationView(withIdentifier: reuseIdentifier) as? T else {
-            return type.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        }
-        annotationView.annotation = annotation
-        return annotationView
-    }
+    static let unicycleColor = UIColor(named: "unicycleColor")
+    static let bicycleColor = UIColor(named: "bicycleColor")
+    static let tricycleColor = UIColor(named: "tricycleColor")
+    static let translucentButtonColor = UIColor(named: "translucentButton")
 }

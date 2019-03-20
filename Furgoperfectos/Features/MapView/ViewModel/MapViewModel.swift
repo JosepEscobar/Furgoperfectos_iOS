@@ -15,11 +15,11 @@ class MapViewModel: NSObject {
         return FurgoperfectosRepository.shared.arrayFurgoperfectos.count
     }
     
-    var annotations: [MKPointAnnotation] {
-        var annotations: [MKPointAnnotation] = []
+    var annotations: [FurgoperfectoAnnotation] {
+        var annotations: [FurgoperfectoAnnotation] = []
         
         for furgoperfecto in FurgoperfectosRepository.shared.arrayFurgoperfectos {
-            let annotation: MKPointAnnotation = MKPointAnnotation()
+            let annotation: FurgoperfectoAnnotation = FurgoperfectoAnnotation()
             if let latitude = CLLocationDegrees(exactly: Double(furgoperfecto.lng!) ?? 0.0), let longitude = CLLocationDegrees(exactly: Double(furgoperfecto.lat!) ?? 0.0) {
                 annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
                 annotations.append(annotation)
@@ -43,9 +43,9 @@ class MapViewModel: NSObject {
         
         FurgoperfectosRepository.shared.fetchData(success: {
             
-            for fp in FurgoperfectosRepository.shared.arrayFurgoperfectos {
-                print(fp.nombre)
-            }
+//            for fp in FurgoperfectosRepository.shared.arrayFurgoperfectos {
+//                print(fp.nombre)
+//            }
             
             succeed()
         }, networkFailure: { (error) in

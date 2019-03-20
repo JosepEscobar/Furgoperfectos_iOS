@@ -9,7 +9,6 @@ target 'Furgoperfectos' do
   pod 'Alamofire'
   pod 'Kingfisher'
   pod 'PKHUD', '~> 5.0'
-  pod 'Cluster'
 
   target 'FurgoperfectosTests' do
     inherit! :search_paths

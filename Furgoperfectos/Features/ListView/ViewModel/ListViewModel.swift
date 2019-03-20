@@ -33,9 +33,9 @@ class ListViewModel: NSObject {
         
         FurgoperfectosRepository.shared.fetchData(success: {
             
-            for fp in FurgoperfectosRepository.shared.arrayFurgoperfectos {
-                print(fp.nombre)
-            }
+//            for fp in FurgoperfectosRepository.shared.arrayFurgoperfectos {
+//                print(fp.nombre)
+//            }
             
             succeed()
         }, networkFailure: { (error) in

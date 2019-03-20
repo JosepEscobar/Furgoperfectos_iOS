@@ -1,28 +1,24 @@
 PODS:
   - Alamofire (4.8.0)
-  - Cluster (2.4.1)
   - Kingfisher (5.1.0)
   - PKHUD (5.2.1)
 
 DEPENDENCIES:
   - Alamofire
-  - Cluster
   - Kingfisher
   - PKHUD (~> 5.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - Cluster
     - Kingfisher
     - PKHUD
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  Cluster: a42c1717ffbd537b75775ec581b892e7c309a094
   Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
   PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
 
-PODFILE CHECKSUM: e0b1ec1df1ee4edf3409733e821198086897b507
+PODFILE CHECKSUM: 1082db9a22e787e29398610110c8e41b8933dabd
 
 COCOAPODS: 1.6.0
