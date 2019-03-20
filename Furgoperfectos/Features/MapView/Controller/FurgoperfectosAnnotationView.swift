@@ -28,9 +28,17 @@ class FurgoperfectoAnnotationView: MKMarkerAnnotationView {
         displayPriority = .defaultHigh
         markerTintColor = UIColor.unicycleColor
         glyphImage = #imageLiteral(resourceName: "furgo_transparent _144")
+        
+        //TODO: Disclosure view
+        canShowCallout = true
+        let detailButton: UIButton = UIButton(type:UIButton.ButtonType.detailDisclosure) as UIButton
+        detailButton.setImage(UIImage(named: "furgo_transparent _144"), for: .normal)
+        rightCalloutAccessoryView = detailButton
     }
 }
 
+
+//// #MARK: DEMO FOR OTHER TYPES - NOT USED NOW
 /// - Tag: BicycleAnnotationView
 class BicycleAnnotationView: MKMarkerAnnotationView {
 
@@ -54,6 +62,7 @@ class BicycleAnnotationView: MKMarkerAnnotationView {
     }
 }
 
+//// #MARK: DEMO FOR OTHER TYPES - NOT USED NOW
 class TricycleAnnotationView: MKMarkerAnnotationView {
 
     static let ReuseID = "tricycleAnnotation"

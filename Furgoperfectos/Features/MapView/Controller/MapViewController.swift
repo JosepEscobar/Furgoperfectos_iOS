@@ -26,10 +26,7 @@ class MapViewController: UIViewController {
         requestLocationAccess()
         setupUserTrackingButtonAndScaleView()
         registerAnnotationViewClasses()
-        centerMap()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        centerMapToUser()
         fetchData()
     }
     
@@ -123,11 +120,27 @@ extension MapViewController: MKMapViewDelegate {
         }
     }
     
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        centerMap(coordinate: view.annotation?.coordinate, automaticZoom: false)
+    }
+    
     //Zoom to user location
-    func centerMap() {
+    func centerMapToUser(){
         if let userLocation = locationManager.location?.coordinate {
-            let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 5000, longitudinalMeters: 5000)
-            mapView.setRegion(viewRegion, animated: false)
+            centerMap(coordinate: userLocation, automaticZoom: true)
+        }
+    }
+    
+    func centerMap(coordinate: CLLocationCoordinate2D?, automaticZoom: Bool) {
+        if let userLocation = coordinate {
+            var coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+            
+            if !automaticZoom {
+                coordinateSpan = mapView.region.span
+            }
+            
+            let viewRegion = MKCoordinateRegion(center: userLocation, span: coordinateSpan)
+            mapView.setRegion(viewRegion, animated: true)
         }
     }
 

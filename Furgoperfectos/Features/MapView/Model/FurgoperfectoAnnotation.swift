@@ -20,6 +20,7 @@ class FurgoperfectoAnnotation: NSObject, Decodable, MKAnnotation {
     
     private var latitude: CLLocationDegrees = 0
     private var longitude: CLLocationDegrees = 0
+    public var title: String?
     
     // This property must be key-value observable, which the `@objc dynamic` attributes provide.
     @objc dynamic var coordinate: CLLocationCoordinate2D {
@@ -33,4 +34,6 @@ class FurgoperfectoAnnotation: NSObject, Decodable, MKAnnotation {
             longitude = newValue.longitude
         }
     }
+    
+    
 }

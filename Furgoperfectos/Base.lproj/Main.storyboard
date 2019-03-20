@@ -34,7 +34,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="I3g-ws-jpA"/>
+                    <navigationItem key="navigationItem" title="Mapa" id="I3g-ws-jpA"/>
                     <connections>
                         <outlet property="mapView" destination="Jja-SS-vIP" id="WHc-Zd-bWC"/>
                     </connections>
@@ -52,6 +52,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.73143352258023875" green="0.5177767099636611" blue="0.18786099417088575" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="SmN-pY-4dN" kind="relationship" relationship="viewControllers" id="2OL-fJ-GUt"/>
