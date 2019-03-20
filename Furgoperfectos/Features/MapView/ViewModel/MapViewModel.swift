@@ -7,11 +7,25 @@
 //
 
 import UIKit
+import MapKit
 
 class MapViewModel: NSObject {
     
     var numberOfFurgoperfectos: Int {
         return FurgoperfectosRepository.shared.arrayFurgoperfectos.count
+    }
+    
+    var annotations: [MKPointAnnotation] {
+        var annotations: [MKPointAnnotation] = []
+        
+        for furgoperfecto in FurgoperfectosRepository.shared.arrayFurgoperfectos {
+            let annotation: MKPointAnnotation = MKPointAnnotation()
+            if let latitude = CLLocationDegrees(exactly: Double(furgoperfecto.lng!) ?? 0.0), let longitude = CLLocationDegrees(exactly: Double(furgoperfecto.lat!) ?? 0.0) {
+                annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                annotations.append(annotation)
+            }
+        }
+        return annotations
     }
     
     // Fetch Data from source

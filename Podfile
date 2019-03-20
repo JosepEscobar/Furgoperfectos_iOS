@@ -8,7 +8,8 @@ target 'Furgoperfectos' do
   # Pods for Furgoperfectos
   pod 'Alamofire'
   pod 'Kingfisher'
-  pod 'NVActivityIndicatorView'
+  pod 'PKHUD', '~> 5.0'
+  pod 'Cluster'
 
   target 'FurgoperfectosTests' do
     inherit! :search_paths

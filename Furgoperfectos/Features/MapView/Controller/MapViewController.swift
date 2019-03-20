@@ -9,16 +9,19 @@
 import UIKit
 import MapKit
 import CoreLocation
+import PKHUD
+
 
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
-    var mapViewModel = MapViewModel()
+    let mapViewModel = MapViewModel()
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        requestLocationAccess()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,8 +29,12 @@ class MapViewController: UIViewController {
     }
 
     func fetchData() {
+        HUD.show(.label("Cargando Furgoperfectos..."))
         mapViewModel.fetchData(success: {
             //
+            self.mapView.addAnnotations(self.mapViewModel.annotations)
+            HUD.flash(.success, delay: 1.0)
+            
         }, networkFailure: { (error) in
             
         }, serverFailure: { (error) in
@@ -36,6 +43,21 @@ class MapViewController: UIViewController {
             
         }) { (error) in
             
+        }
+    }
+    
+    func requestLocationAccess() {
+        let status = CLLocationManager.authorizationStatus()
+        
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            return
+            
+        case .denied, .restricted:
+            print("location access denied")
+            
+        default:
+            locationManager.requestWhenInUseAuthorization()
         }
     }
 
@@ -47,6 +69,18 @@ extension MapViewController: MKMapViewDelegate {
         
     }
     
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        if annotation is MKUserLocation {
+//            return nil
+//        }
+//            
+//        else {
+//            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotationView") ?? MKAnnotationView()
+//            //annotationView.image = UIImage(named: "place icon")
+//            return annotationView
+//        }
+//    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
             let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
@@ -56,4 +90,5 @@ extension MapViewController: MKMapViewDelegate {
     }
 
 }
+
 

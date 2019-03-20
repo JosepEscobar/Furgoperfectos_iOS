@@ -41,5 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Se utilizará su ubicación únicamente para mostrarla en el mapa y calcular discancias.</string>
 </dict>
 </plist>
