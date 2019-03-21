@@ -122,7 +122,7 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        centerMap(coordinate: view.annotation?.coordinate, automaticZoom: false)
+        centerMap(coordinate: view.annotation?.coordinate, automaticZoom: false, isInitCenter: false)
         
         guard let annotation = view.annotation as? FurgoperfectoAnnotation else { return }
         
@@ -158,15 +158,13 @@ extension MapViewController: MKMapViewDelegate {
                     .scaleFactor(UIScreen.main.scale),
                     .transition(.fade(1)),
                     .diskCacheExpiration(StorageExpiration.days(365))
-                ])
-            {
-                result in
-                switch result {
-                case .success(let value):
-                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
-                case .failure(let error):
-                    print("Job failed: \(error.localizedDescription)")
-                }
+                ]){ result in
+                    switch result {
+                        case .success(let value):
+                            print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                        case .failure(let error):
+                            print("Job failed: \(error.localizedDescription)")
+                    }
             }
             
             nibView.translatesAutoresizingMaskIntoConstraints = false
@@ -178,28 +176,34 @@ extension MapViewController: MKMapViewDelegate {
     //Zoom to user location
     func centerMapToUser(){
         if let userLocation = locationManager.location?.coordinate {
-            centerMap(coordinate: userLocation, automaticZoom: true)
+            centerMap(coordinate: userLocation, automaticZoom: true, isInitCenter: true)
         }
     }
     
-    func centerMap(coordinate: CLLocationCoordinate2D?, automaticZoom: Bool) {
+    func centerMap(coordinate: CLLocationCoordinate2D?, automaticZoom: Bool, isInitCenter: Bool) {
         if let userLocation = coordinate {
             var coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
             
             if !automaticZoom {
                 coordinateSpan = mapView.region.span
             }
-            
-            let viewRegion = MKCoordinateRegion(center: userLocation, span: coordinateSpan)
-            mapView.setRegion(viewRegion, animated: true)
+
+            if isInitCenter {
+                let viewRegion = MKCoordinateRegion(center: userLocation, span: coordinateSpan)
+                mapView.setRegion(viewRegion, animated: true)
+            } else {
+                var userLocationModified = userLocation
+                userLocationModified.latitude = userLocation.latitude - self.mapView.region.span.latitudeDelta * -0.20
+                
+                let viewRegion = MKCoordinateRegion(center: userLocationModified, span: coordinateSpan)
+                mapView.setRegion(viewRegion, animated: true)
+            }
         }
     }
-
 }
 
 
 extension MapViewController: CLLocationManagerDelegate {
-    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         let locationAuthorized = status == .authorizedWhenInUse
         userTrackingButton.isHidden = !locationAuthorized
