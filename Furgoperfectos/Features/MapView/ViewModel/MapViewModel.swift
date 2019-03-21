@@ -23,6 +23,11 @@ class MapViewModel: NSObject {
             if let latitude = CLLocationDegrees(exactly: Double(furgoperfecto.lng!) ?? 0.0), let longitude = CLLocationDegrees(exactly: Double(furgoperfecto.lat!) ?? 0.0) {
                 annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
                 annotation.title = furgoperfecto.nombre
+                
+                if let id = furgoperfecto.id {
+                    annotation.id = Int(id)
+                }
+                
                 annotations.append(annotation)
             }
         }

@@ -24,22 +24,36 @@ class ClusterAnnotationView: MKAnnotationView {
     override func prepareForDisplay() {
         super.prepareForDisplay()
         
-        if let cluster = annotation as? MKClusterAnnotation {
-            let totalBikes = cluster.memberAnnotations.count
-            
-            if count(furgoperfectoType: .furgoperfectoDefault) > 0 {
-                image = drawUnicycleCount(count: totalBikes)
-            } else {
-                let tricycleCount = count(furgoperfectoType: .tricycle)
-                image = drawRatioBicycleToTricycle(tricycleCount, to: totalBikes)
-            }
-            
-            if count(furgoperfectoType: .furgoperfectoDefault) > 0 {
-                displayPriority = .defaultLow
-            } else {
-                displayPriority = .defaultHigh
+        // Move to a background thread to do some long running work
+        DispatchQueue.global(qos: .userInteractive).async {
+            if let cluster = self.annotation as? MKClusterAnnotation {
+                let totalBikes = cluster.memberAnnotations.count
+                
+                if self.count(furgoperfectoType: .furgoperfectoDefault) > 0 {
+                    let image = self.drawUnicycleCount(count: totalBikes)
+                    DispatchQueue.main.async {
+                        self.image = image
+                    }
+                } else {
+                    let tricycleCount = self.count(furgoperfectoType: .tricycle)
+                    let image = self.drawRatioBicycleToTricycle(tricycleCount, to: totalBikes)
+                    DispatchQueue.main.async {
+                        self.image = image
+                    }
+                }
+                
+                if self.count(furgoperfectoType: .furgoperfectoDefault) > 0 {
+                    DispatchQueue.main.async {
+                        self.displayPriority = .defaultLow
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.displayPriority = .defaultHigh
+                    }
+                }
             }
         }
+        
     }
     
     private func drawRatioBicycleToTricycle(_ tricycleCount: Int, to totalBikes: Int) -> UIImage {

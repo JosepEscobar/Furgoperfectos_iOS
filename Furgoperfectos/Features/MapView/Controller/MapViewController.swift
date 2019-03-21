@@ -122,6 +122,22 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         centerMap(coordinate: view.annotation?.coordinate, automaticZoom: false)
+        
+        guard let annotation = view.annotation as? FurgoperfectoAnnotation else { return }
+        
+        print(annotation.id) // ITS WORKS!
+        // TODO: Make this with xib
+        // https://stackoverflow.com/questions/32581049/mapkit-ios-9-detailcalloutaccessoryview-usage
+        let myView = UIView()
+        myView.backgroundColor = .green
+        
+        let widthConstraint = NSLayoutConstraint(item: myView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 250)
+        myView.addConstraint(widthConstraint)
+        
+        let heightConstraint = NSLayoutConstraint(item: myView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 80)
+        myView.addConstraint(heightConstraint)
+        
+        view.detailCalloutAccessoryView = myView
     }
     
     //Zoom to user location
