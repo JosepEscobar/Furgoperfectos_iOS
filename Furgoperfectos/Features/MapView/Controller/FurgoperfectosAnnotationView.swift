@@ -31,9 +31,20 @@ class FurgoperfectoAnnotationView: MKMarkerAnnotationView {
         
         //TODO: Disclosure view
         canShowCallout = true
-        let detailButton: UIButton = UIButton(type:UIButton.ButtonType.detailDisclosure) as UIButton
-        detailButton.setImage(UIImage(named: "furgo_transparent _144"), for: .normal)
-        rightCalloutAccessoryView = detailButton
+//        let detailButton: UIButton = UIButton(type:UIButton.ButtonType.detailDisclosure) as UIButton
+//        detailButton.setImage(UIImage(named: "furgo_transparent _144"), for: .normal)
+        
+        // TODO: Make this with xib
+        let myView = UIView()
+        myView.backgroundColor = .green
+        
+        let widthConstraint = NSLayoutConstraint(item: myView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 250)
+        myView.addConstraint(widthConstraint)
+        
+        let heightConstraint = NSLayoutConstraint(item: myView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 80)
+        myView.addConstraint(heightConstraint)
+        
+        detailCalloutAccessoryView = myView
     }
 }
 
