@@ -20,7 +20,6 @@ class MapViewController: UIViewController {
     private let locationManager = CLLocationManager()
     private var userTrackingButton: MKUserTrackingButton!
     private var scaleView: MKScaleView!
-    private var selectFirstAnnotation = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,16 +120,6 @@ extension MapViewController: MKMapViewDelegate {
             return TricycleAnnotationView(annotation: annotation, reuseIdentifier: TricycleAnnotationView.ReuseID)
         }
     }
-    
-    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        if selectFirstAnnotation == true {
-            if let annotation = mapView.annotations.first(where: { !($0 is MKUserLocation) }) {
-                mapView.selectAnnotation(annotation, animated: true)
-                selectFirstAnnotation = false
-            }
-        }
-    }
-
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         centerMap(coordinate: view.annotation?.coordinate, automaticZoom: false)
