@@ -27,7 +27,7 @@ class FurgoperfectoAnnotationView: MKMarkerAnnotationView {
         super.prepareForDisplay()
         displayPriority = .defaultHigh
         markerTintColor = UIColor.unicycleColor
-        glyphImage = #imageLiteral(resourceName: "furgo_transparent _144")
+        glyphImage = #imageLiteral(resourceName: "furgo_transparent_144")
         canShowCallout = true
     }
 }

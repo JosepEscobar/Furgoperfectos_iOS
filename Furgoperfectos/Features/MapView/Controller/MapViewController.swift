@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 import PKHUD
+import Kingfisher
 
 
 class MapViewController: UIViewController {
@@ -19,6 +20,7 @@ class MapViewController: UIViewController {
     private let locationManager = CLLocationManager()
     private var userTrackingButton: MKUserTrackingButton!
     private var scaleView: MKScaleView!
+    private var selectFirstAnnotation = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,24 +122,68 @@ extension MapViewController: MKMapViewDelegate {
         }
     }
     
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        if selectFirstAnnotation == true {
+            if let annotation = mapView.annotations.first(where: { !($0 is MKUserLocation) }) {
+                mapView.selectAnnotation(annotation, animated: true)
+                selectFirstAnnotation = false
+            }
+        }
+    }
+
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         centerMap(coordinate: view.annotation?.coordinate, automaticZoom: false)
         
         guard let annotation = view.annotation as? FurgoperfectoAnnotation else { return }
         
-        print(annotation.id) // ITS WORKS!
-        // TODO: Make this with xib
-        // https://stackoverflow.com/questions/32581049/mapkit-ios-9-detailcalloutaccessoryview-usage
-        let myView = UIView()
-        myView.backgroundColor = .green
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            view.detailCalloutAccessoryView = self.getCalloutAccessoryView(annotation: annotation)
+        })
+
         
-        let widthConstraint = NSLayoutConstraint(item: myView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 250)
-        myView.addConstraint(widthConstraint)
-        
-        let heightConstraint = NSLayoutConstraint(item: myView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 80)
-        myView.addConstraint(heightConstraint)
-        
-        view.detailCalloutAccessoryView = myView
+    }
+    
+    func getCalloutAccessoryView(annotation: FurgoperfectoAnnotation) -> FurgoperfectoMapAccessoryView? {
+        let bundle = Bundle.main
+        if let nibView = bundle.loadNibNamed("FurgoperfectoMapAccessoryView",
+                                             owner: self,
+                                             options: nil)?.first as? FurgoperfectoMapAccessoryView {
+            /*
+             
+             nibView.delegate = self
+             nibView.lblViewReceipt.text = "caixabank_recibos_detalle_texto_accion_ver_recibo".localizeMe()
+             
+             nibView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+             
+             */
+            let url = URL(string: annotation.furgoperfecto!.imagen ?? "")
+            let processor = DownsamplingImageProcessor(size: nibView.imageView.bounds.size)
+            
+            nibView.imageView.kf.indicatorType = .activity
+            nibView.imageView.kf.setImage(
+                with: url,
+                placeholder: nil,
+                options: [
+                    .processor(processor),
+                    .scaleFactor(UIScreen.main.scale),
+                    .transition(.fade(1)),
+                    .diskCacheExpiration(StorageExpiration.days(365))
+                ])
+            {
+                result in
+                switch result {
+                case .success(let value):
+                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                case .failure(let error):
+                    print("Job failed: \(error.localizedDescription)")
+                }
+            }
+            
+            nibView.translatesAutoresizingMaskIntoConstraints = false
+            return nibView
+        }
+        return nil
     }
     
     //Zoom to user location
