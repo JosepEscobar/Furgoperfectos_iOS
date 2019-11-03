@@ -19,6 +19,7 @@
 		4842923B222DBE12002B2C2C /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4842923A222DBE12002B2C2C /* APIEndpoints.swift */; };
 		4842923D222DBF0A002B2C2C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4842923C222DBF0A002B2C2C /* README.md */; };
 		4885F1B4236EE942003FF77D /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1B3236EE942003FF77D /* URLSessionExtensions.swift */; };
+		4885F1B7236EFA5C003FF77D /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1B6236EFA5C003FF77D /* ListTableViewCell.swift */; };
 		48BD1A8922381CDA000AF785 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD1A8822381CDA000AF785 /* Extensions.swift */; };
 		48BD1A8F2238248C000AF785 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD1A8E2238248C000AF785 /* ListViewModel.swift */; };
 		48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF531A222DA3F000C4F911 /* AppDelegate.swift */; };
@@ -66,6 +67,7 @@
 		4842923A222DBE12002B2C2C /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		4842923C222DBF0A002B2C2C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4885F1B3236EE942003FF77D /* URLSessionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
+		4885F1B6236EFA5C003FF77D /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		48BD1A8822381CDA000AF785 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		48BD1A8E2238248C000AF785 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		48CF5317222DA3F000C4F911 /* Furgoperfectos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furgoperfectos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +168,14 @@
 				48429238222DAD3F002B2C2C /* FurgoperfectoModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4885F1B5236EFA36003FF77D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4885F1B6236EFA5C003FF77D /* ListTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		48BD1A8B22382415000AF785 /* ViewModel */ = {
@@ -274,6 +284,7 @@
 		48CF534A222DA4B300C4F911 /* ListView */ = {
 			isa = PBXGroup;
 			children = (
+				4885F1B5236EFA36003FF77D /* View */,
 				48BD1A8B22382415000AF785 /* ViewModel */,
 				48BD1A8D2238245D000AF785 /* Controller */,
 			);
@@ -540,6 +551,7 @@
 				48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */,
 				48429239222DAD3F002B2C2C /* FurgoperfectoModel.swift in Sources */,
 				48429234222DACF1002B2C2C /* MapViewModel.swift in Sources */,
+				4885F1B7236EFA5C003FF77D /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -157,6 +157,7 @@ extension MapViewController: MKMapViewDelegate {
                     .processor(processor),
                     .scaleFactor(UIScreen.main.scale),
                     .transition(.fade(1)),
+                    .cacheOriginalImage,
                     .diskCacheExpiration(StorageExpiration.days(365))
                 ]){ result in
                     switch result {

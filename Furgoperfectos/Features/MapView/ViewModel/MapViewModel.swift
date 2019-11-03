@@ -35,10 +35,6 @@ class MapViewModel: NSObject {
                           emptyList empty: @escaping((NSError) -> Void)) {
         
         FurgoperfectosRepository.shared.fetchData(success: {
-            
-//            for fp in FurgoperfectosRepository.shared.arrayFurgoperfectos {
-//                print(fp.nombre)
-//            }
             self.annotationsBuilder()
             succeed()
         }, networkFailure: { (error) in
