@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		48429239222DAD3F002B2C2C /* FurgoperfectoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429238222DAD3F002B2C2C /* FurgoperfectoModel.swift */; };
 		4842923B222DBE12002B2C2C /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4842923A222DBE12002B2C2C /* APIEndpoints.swift */; };
 		4842923D222DBF0A002B2C2C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4842923C222DBF0A002B2C2C /* README.md */; };
+		4885F1B4236EE942003FF77D /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1B3236EE942003FF77D /* URLSessionExtensions.swift */; };
 		48BD1A8922381CDA000AF785 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD1A8822381CDA000AF785 /* Extensions.swift */; };
 		48BD1A8F2238248C000AF785 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD1A8E2238248C000AF785 /* ListViewModel.swift */; };
 		48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF531A222DA3F000C4F911 /* AppDelegate.swift */; };
@@ -64,6 +65,7 @@
 		48429238222DAD3F002B2C2C /* FurgoperfectoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectoModel.swift; sourceTree = "<group>"; };
 		4842923A222DBE12002B2C2C /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		4842923C222DBF0A002B2C2C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4885F1B3236EE942003FF77D /* URLSessionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
 		48BD1A8822381CDA000AF785 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		48BD1A8E2238248C000AF785 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		48CF5317222DA3F000C4F911 /* Furgoperfectos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furgoperfectos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +227,7 @@
 				48CF5326222DA3F200C4F911 /* Info.plist */,
 				4842923A222DBE12002B2C2C /* APIEndpoints.swift */,
 				48BD1A8822381CDA000AF785 /* Extensions.swift */,
+				4885F1B3236EE942003FF77D /* URLSessionExtensions.swift */,
 			);
 			path = Furgoperfectos;
 			sourceTree = "<group>";
@@ -439,20 +442,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -534,6 +528,7 @@
 			files = (
 				48429232222DACD5002B2C2C /* ListTableViewController.swift in Sources */,
 				4842923B222DBE12002B2C2C /* APIEndpoints.swift in Sources */,
+				4885F1B4236EE942003FF77D /* URLSessionExtensions.swift in Sources */,
 				4837C7F1224427170060F89D /* FurgoperfectoMapAccessoryView.swift in Sources */,
 				48009C4B2242E8940086DE35 /* FurgoperfectosAnnotationView.swift in Sources */,
 				48009C472242E79D0086DE35 /* ClusterAnnotationView.swift in Sources */,
@@ -732,7 +727,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.josepescobar.furgoperfectos.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -754,7 +749,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.josepescobar.furgoperfectos.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -766,7 +761,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25Z7VXYCRL;
+				DEVELOPMENT_TEAM = DQZ7G5MLVC;
 				INFOPLIST_FILE = FurgoperfectosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -775,7 +770,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.josepescobar.FurgoperfectosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Furgoperfectos.app/Furgoperfectos";
 			};
@@ -788,7 +783,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25Z7VXYCRL;
+				DEVELOPMENT_TEAM = DQZ7G5MLVC;
 				INFOPLIST_FILE = FurgoperfectosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -797,7 +792,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.josepescobar.FurgoperfectosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Furgoperfectos.app/Furgoperfectos";
 			};
@@ -809,7 +804,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25Z7VXYCRL;
+				DEVELOPMENT_TEAM = DQZ7G5MLVC;
 				INFOPLIST_FILE = FurgoperfectosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -818,7 +813,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.josepescobar.FurgoperfectosUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Furgoperfectos;
 			};
@@ -830,7 +825,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25Z7VXYCRL;
+				DEVELOPMENT_TEAM = DQZ7G5MLVC;
 				INFOPLIST_FILE = FurgoperfectosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -839,7 +834,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.josepescobar.FurgoperfectosUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Furgoperfectos;
 			};

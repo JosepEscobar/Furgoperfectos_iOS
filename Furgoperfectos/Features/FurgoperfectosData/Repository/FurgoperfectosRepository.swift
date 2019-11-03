@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class FurgoperfectosRepository: NSObject {
     
@@ -32,20 +31,23 @@ class FurgoperfectosRepository: NSObject {
             return
         }
         
-        Alamofire.request(apiGetEverithingLight).responseData { response in
+        guard let url = URL(string: apiGetEverithingLight) else {
+            succeed()
+            return
+        }
+        
+        let task = URLSession.shared.furgoperfectosResponseTask(with: url) { furgoperfectosResponse, response, error in
+            if let furgoperfectosResponse = furgoperfectosResponse {
 
-            if let _ = response.result.value {
-                
-                let decoder = JSONDecoder()
-                let furgoperfectosResult: Result<[FurgoperfectoModel]> = decoder.decodeResponse(from: response)
-                
-                if furgoperfectosResult.isSuccess {
-                    self.arrayFurgoperfectos = furgoperfectosResult.value ?? []
+
+                self.arrayFurgoperfectos = furgoperfectosResponse
+                DispatchQueue.main.async {
                     succeed()
                 }
+                
             }
         }
-
+        task.resume()
     }
 
 }
