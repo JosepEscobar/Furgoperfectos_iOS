@@ -23,7 +23,6 @@
                                 </connections>
                             </mapView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Jja-SS-vIP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0Aj-Qw-JaF"/>
                             <constraint firstItem="Jja-SS-vIP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9a7-kv-Gh3"/>

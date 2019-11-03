@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import warqLog
 
 class FurgoperfectosRepository: NSObject {
     
@@ -27,6 +28,7 @@ class FurgoperfectosRepository: NSObject {
                           emptyList empty: @escaping((NSError) -> Void)) {
         
         guard arrayFurgoperfectos.isEmpty else {
+            WarqLog.debug("Data already loaded, loding from cache")
             succeed()
             return
         }
@@ -42,6 +44,7 @@ class FurgoperfectosRepository: NSObject {
 
                 self.arrayFurgoperfectos = furgoperfectosResponse
                 DispatchQueue.main.async {
+                    WarqLog.debug("Data loaded from server")
                     succeed()
                 }
                 

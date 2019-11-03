@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import warqLog
 
 class ListTableViewCell: UITableViewCell {
     
@@ -47,9 +48,9 @@ class ListTableViewCell: UITableViewCell {
                 result in
                 switch result {
                 case .success(let value):
-                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                    WarqLog.debug("Task done for: \(value.source.url?.absoluteString ?? "")")
                 case .failure(let error):
-                    print("Job failed: \(error.localizedDescription)")
+                    WarqLog.error("Job failed: \(error.localizedDescription)")
                 }
             }
         }

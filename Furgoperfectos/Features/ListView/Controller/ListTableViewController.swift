@@ -58,10 +58,6 @@ class ListTableViewController: UITableViewController {
         } else {
             return UITableViewCell()
         }
-
-        
-
-        
     }
  
 

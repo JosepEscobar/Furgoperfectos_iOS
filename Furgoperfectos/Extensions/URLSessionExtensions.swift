@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import warqLog
 
 extension URLSession {
 
@@ -26,9 +27,12 @@ extension URLSession {
             }
 
             do {
+                WarqLog.debug(response)
+                //WarqLog.debug(String(data: data, encoding: .utf8) ?? "NO RESPONSE")
                 let decodedData = try URLSession.newJSONDecoder().decode(T.self, from: data)
                 completionHandler(decodedData, response, nil)
             } catch let error as NSError {
+                WarqLog.error(error.localizedDescription)
                 completionHandler(nil, response, error)
             }
 
