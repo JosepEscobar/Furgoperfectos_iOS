@@ -35,46 +35,46 @@ class FurgoperfectoAnnotationView: MKMarkerAnnotationView {
 
 //// #MARK: DEMO FOR OTHER TYPES - NOT USED NOW
 /// - Tag: BicycleAnnotationView
-class BicycleAnnotationView: MKMarkerAnnotationView {
-
-    static let ReuseID = "bicycleAnnotation"
-    
-    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
-        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        clusteringIdentifier = multiWheelCycleClusterID
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    /// - Tag: DisplayConfiguration
-    override func prepareForDisplay() {
-        super.prepareForDisplay()
-        displayPriority = .defaultHigh
-        markerTintColor = UIColor.bicycleColor
-        glyphImage = #imageLiteral(resourceName: "bicycle")
-    }
-}
+//class BicycleAnnotationView: MKMarkerAnnotationView {
+//
+//    static let ReuseID = "bicycleAnnotation"
+//
+//    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
+//        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+//        clusteringIdentifier = multiWheelCycleClusterID
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//
+//    /// - Tag: DisplayConfiguration
+//    override func prepareForDisplay() {
+//        super.prepareForDisplay()
+//        displayPriority = .defaultHigh
+//        markerTintColor = UIColor.bicycleColor
+//        glyphImage = #imageLiteral(resourceName: "bicycle")
+//    }
+//}
 
 //// #MARK: DEMO FOR OTHER TYPES - NOT USED NOW
-class TricycleAnnotationView: MKMarkerAnnotationView {
-
-    static let ReuseID = "tricycleAnnotation"
-
-    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
-        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        clusteringIdentifier = multiWheelCycleClusterID
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override func prepareForDisplay() {
-        super.prepareForDisplay()
-        displayPriority = .defaultHigh
-        markerTintColor = UIColor.tricycleColor
-        glyphImage = #imageLiteral(resourceName: "tricycle")
-    }
-}
+//class TricycleAnnotationView: MKMarkerAnnotationView {
+//
+//    static let ReuseID = "tricycleAnnotation"
+//
+//    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
+//        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+//        clusteringIdentifier = multiWheelCycleClusterID
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//
+//    override func prepareForDisplay() {
+//        super.prepareForDisplay()
+//        displayPriority = .defaultHigh
+//        markerTintColor = UIColor.tricycleColor
+//        glyphImage = #imageLiteral(resourceName: "tricycle")
+//    }
+//}

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ListTableViewController: UITableViewController {
     
@@ -28,7 +29,6 @@ class ListTableViewController: UITableViewController {
     
     func fetchData() {
         listViewModel.fetchData(success: {
-            //
             self.tableView.reloadData()
         }, networkFailure: { (error) in
             
@@ -47,12 +47,21 @@ class ListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "listReuseIdentifier", for: indexPath)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "listReuseIdentifier", for: indexPath) as? ListTableViewCell {
+            // Configure the cell...
+            let title = listViewModel.getName(index: indexPath.row)
+            let description = listViewModel.getDescription(index: indexPath.row)
+            let imageURL = listViewModel.getImage(index: indexPath.row)
+            cell.configureCell(title: title, description: description, imageURL: imageURL)
+            
+            return cell
+        } else {
+            return UITableViewCell()
+        }
 
-        // Configure the cell...
-        cell.textLabel?.text = listViewModel.getName(index: indexPath.row)
+        
 
-        return cell
+        
     }
  
 

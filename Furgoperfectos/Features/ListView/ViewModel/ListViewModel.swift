@@ -18,6 +18,14 @@ class ListViewModel: NSObject {
         return FurgoperfectosRepository.shared.arrayFurgoperfectos[index].nombre ?? ""
     }
     
+    func getDescription(index: Int) -> String {
+        return FurgoperfectosRepository.shared.arrayFurgoperfectos[index].html ?? ""
+    }
+    
+    func getImage(index: Int) -> String {
+        return FurgoperfectosRepository.shared.arrayFurgoperfectos[index].imagen ?? ""
+    }
+    
     // Fetch Data from source
     ///
     /// - Parameters:
@@ -32,11 +40,6 @@ class ListViewModel: NSObject {
                           emptyList empty: @escaping((NSError) -> Void)) {
         
         FurgoperfectosRepository.shared.fetchData(success: {
-            
-//            for fp in FurgoperfectosRepository.shared.arrayFurgoperfectos {
-//                print(fp.nombre)
-//            }
-            
             succeed()
         }, networkFailure: { (error) in
             // do something

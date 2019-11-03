@@ -7,30 +7,7 @@
 //
 
 import Foundation
-import Alamofire
 import MapKit
-
-extension JSONDecoder {
-    func decodeResponse<T: Decodable>(from response: DataResponse<Data>) -> Result<T> {
-        guard response.error == nil else {
-            print(response.error!)
-            return .failure(response.error!)
-        }
-        
-        guard let responseData = response.data else {
-            fatalError("Did not get data in response")
-        }
-        
-        do {
-            let item = try decode(T.self, from: responseData)
-            return .success(item)
-        } catch {
-            print("error trying to decode response")
-            print(error)
-            return .failure(error)
-        }
-    }
-}
 
 extension String {
     func utf8DecodedString()-> String {

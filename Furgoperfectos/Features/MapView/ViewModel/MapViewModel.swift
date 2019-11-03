@@ -11,28 +11,14 @@ import MapKit
 
 class MapViewModel: NSObject {
     
+    private var annotationsArray: [FurgoperfectoAnnotation] = []
+    
     var numberOfFurgoperfectos: Int {
         return FurgoperfectosRepository.shared.arrayFurgoperfectos.count
     }
     
     var annotations: [FurgoperfectoAnnotation] {
-        var annotations: [FurgoperfectoAnnotation] = []
-        
-        for furgoperfecto in FurgoperfectosRepository.shared.arrayFurgoperfectos {
-            let annotation: FurgoperfectoAnnotation = FurgoperfectoAnnotation()
-            if let latitude = CLLocationDegrees(exactly: Double(furgoperfecto.lng!) ?? 0.0), let longitude = CLLocationDegrees(exactly: Double(furgoperfecto.lat!) ?? 0.0) {
-                annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-                annotation.title = furgoperfecto.nombre
-                annotation.furgoperfecto = furgoperfecto
-                
-                if let id = furgoperfecto.id {
-                    annotation.id = Int(id)
-                }
-                
-                annotations.append(annotation)
-            }
-        }
-        return annotations
+        return annotationsArray
     }
     
     // Fetch Data from source
@@ -49,11 +35,7 @@ class MapViewModel: NSObject {
                           emptyList empty: @escaping((NSError) -> Void)) {
         
         FurgoperfectosRepository.shared.fetchData(success: {
-            
-//            for fp in FurgoperfectosRepository.shared.arrayFurgoperfectos {
-//                print(fp.nombre)
-//            }
-            
+            self.annotationsBuilder()
             succeed()
         }, networkFailure: { (error) in
             // do something
@@ -66,6 +48,23 @@ class MapViewModel: NSObject {
         }
         
         
+    }
+    
+    private func annotationsBuilder() {
+        for furgoperfecto in FurgoperfectosRepository.shared.arrayFurgoperfectos {
+            let annotation: FurgoperfectoAnnotation = FurgoperfectoAnnotation()
+            if let latitude = CLLocationDegrees(exactly: Double(furgoperfecto.lng!) ?? 0.0), let longitude = CLLocationDegrees(exactly: Double(furgoperfecto.lat!) ?? 0.0) {
+                annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                annotation.title = furgoperfecto.nombre
+                annotation.furgoperfecto = furgoperfecto
+                
+                if let id = furgoperfecto.id {
+                    annotation.id = Int(id)
+                }
+                
+                annotationsArray.append(annotation)
+            }
+        }
     }
 
 }
