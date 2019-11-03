@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,6 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ekr-go-SF5">
                     <rect key="frame" x="0.0" y="-8" width="250" height="125"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="250" id="Chq-QW-Hfn"/>
                         <constraint firstAttribute="height" constant="125" id="wwE-4A-lHb"/>
                     </constraints>
                 </imageView>
@@ -29,39 +26,37 @@
                         <constraint firstAttribute="height" constant="21" id="Hbm-4H-0fY"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1eS-S3-zuc">
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1eS-S3-zuc">
                     <rect key="frame" x="0.0" y="142" width="180" height="24"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicycle" translatesAutoresizingMaskIntoConstraints="NO" id="pem-yW-xny">
                             <rect key="frame" x="0.0" y="0.0" width="60" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="3ZJ-bo-K0B"/>
-                                <constraint firstAttribute="width" constant="24" id="NVU-cp-SIf"/>
+                                <constraint firstAttribute="width" constant="60" id="NVU-cp-SIf"/>
                             </constraints>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicycle" translatesAutoresizingMaskIntoConstraints="NO" id="nbL-ZB-MvM">
                             <rect key="frame" x="60" y="0.0" width="60" height="24"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="24" id="FWh-5i-ovJ"/>
                                 <constraint firstAttribute="height" constant="24" id="JWf-ve-2PN"/>
+                                <constraint firstAttribute="width" constant="60" id="NAA-AD-wAR"/>
                             </constraints>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicycle" translatesAutoresizingMaskIntoConstraints="NO" id="XXN-Eb-ZOe">
                             <rect key="frame" x="120" y="0.0" width="60" height="24"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="24" id="M4h-dY-jGf"/>
                                 <constraint firstAttribute="height" constant="24" id="Rlt-us-hxD"/>
+                                <constraint firstAttribute="width" constant="60" id="b3V-HS-DBu"/>
                             </constraints>
                         </imageView>
                     </subviews>
                     <constraints>
                         <constraint firstItem="pem-yW-xny" firstAttribute="top" secondItem="1eS-S3-zuc" secondAttribute="top" id="ClS-rY-rWt"/>
-                        <constraint firstItem="pem-yW-xny" firstAttribute="centerY" secondItem="1eS-S3-zuc" secondAttribute="centerY" id="bV2-jQ-bjh"/>
                         <constraint firstAttribute="bottom" secondItem="pem-yW-xny" secondAttribute="bottom" id="gW3-CK-V6g"/>
-                        <constraint firstItem="pem-yW-xny" firstAttribute="leading" secondItem="1eS-S3-zuc" secondAttribute="leading" id="i8K-nl-BSH"/>
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN1-Hk-mUd">
