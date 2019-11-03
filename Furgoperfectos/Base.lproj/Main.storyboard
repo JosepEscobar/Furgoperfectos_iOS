@@ -171,7 +171,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cY8-TZ-m2e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.6588235294" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -193,7 +192,6 @@
                         <viewLayoutGuide key="safeArea" id="bkh-Uq-JOv"/>
                     </view>
                     <navigationItem key="navigationItem" id="vp3-ir-goJ"/>
-                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49z-oA-JFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
