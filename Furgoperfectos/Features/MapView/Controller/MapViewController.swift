@@ -114,10 +114,10 @@ extension MapViewController: MKMapViewDelegate {
         switch annotation.type {
         case .furgoperfectoDefault:
             return FurgoperfectoAnnotationView(annotation: annotation, reuseIdentifier: FurgoperfectoAnnotationView.ReuseID)
-        case .bicycle:
-            return BicycleAnnotationView(annotation: annotation, reuseIdentifier: BicycleAnnotationView.ReuseID)
-        case .tricycle:
-            return TricycleAnnotationView(annotation: annotation, reuseIdentifier: TricycleAnnotationView.ReuseID)
+//        case .bicycle:
+//            return BicycleAnnotationView(annotation: annotation, reuseIdentifier: BicycleAnnotationView.ReuseID)
+//        case .tricycle:
+//            return TricycleAnnotationView(annotation: annotation, reuseIdentifier: TricycleAnnotationView.ReuseID)
         }
     }
     

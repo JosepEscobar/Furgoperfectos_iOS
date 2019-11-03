@@ -12,8 +12,8 @@ class FurgoperfectoAnnotation: NSObject, Decodable, MKAnnotation {
     
     enum FurgoperfectoType: Int, Decodable {
         case furgoperfectoDefault
-        case bicycle
-        case tricycle
+//        case bicycle
+//        case tricycle
     }
     
     var type: FurgoperfectoType = .furgoperfectoDefault

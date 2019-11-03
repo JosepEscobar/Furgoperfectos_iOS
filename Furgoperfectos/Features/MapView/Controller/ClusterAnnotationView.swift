@@ -29,22 +29,22 @@ class ClusterAnnotationView: MKAnnotationView {
             if let cluster = self.annotation as? MKClusterAnnotation {
                 let totalBikes = cluster.memberAnnotations.count
                 
-                if self.count(furgoperfectoType: .furgoperfectoDefault) > 0 {
-                    let image = self.drawUnicycleCount(count: totalBikes)
-                    DispatchQueue.main.async {
-                        self.image = image
-                    }
-                } else {
-                    let tricycleCount = self.count(furgoperfectoType: .tricycle)
-                    let image = self.drawRatioBicycleToTricycle(tricycleCount, to: totalBikes)
-                    DispatchQueue.main.async {
-                        self.image = image
-                    }
+//                if self.count(furgoperfectoType: .furgoperfectoDefault) > 0 {
+                let image = self.drawUnicycleCount(count: totalBikes)
+                DispatchQueue.main.async {
+                    self.image = image
                 }
+//                } else {
+//                    let tricycleCount = self.count(furgoperfectoType: .tricycle)
+//                    let image = self.drawRatioBicycleToTricycle(tricycleCount, to: totalBikes)
+//                    DispatchQueue.main.async {
+//                        self.image = image
+//                    }
+//                }
                 
                 if self.count(furgoperfectoType: .furgoperfectoDefault) > 0 {
                     DispatchQueue.main.async {
-                        self.displayPriority = .defaultLow
+                        self.displayPriority = .defaultHigh
                     }
                 } else {
                     DispatchQueue.main.async {
