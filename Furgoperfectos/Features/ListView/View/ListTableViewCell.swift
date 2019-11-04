@@ -11,11 +11,11 @@ import Kingfisher
 import warqLog
 
 class ListTableViewCell: UITableViewCell {
-    
+
     @IBOutlet weak var furgoperfectoImageView: UIImageView!
     @IBOutlet weak var furgoperfectoTitleLabel: UILabel!
     @IBOutlet weak var furgoperfectoDescriptionLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,7 +26,7 @@ class ListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func configureCell(title: String, description: String, imageURL: String) {
         furgoperfectoTitleLabel?.text = title
         furgoperfectoDescriptionLabel.text = description
@@ -43,8 +43,7 @@ class ListTableViewCell: UITableViewCell {
                     .transition(.fade(1)),
                     .cacheOriginalImage,
                     .diskCacheExpiration(StorageExpiration.days(365))
-                ])
-            {
+                ]) {
                 result in
                 switch result {
                 case .success(let value):
@@ -54,7 +53,7 @@ class ListTableViewCell: UITableViewCell {
                 }
             }
         }
-        
+
     }
 
 }

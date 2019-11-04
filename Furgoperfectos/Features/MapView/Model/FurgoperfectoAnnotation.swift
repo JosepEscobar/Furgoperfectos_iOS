@@ -9,21 +9,21 @@
 import MapKit
 
 class FurgoperfectoAnnotation: NSObject, Decodable, MKAnnotation {
-    
+
     enum FurgoperfectoType: Int, Decodable {
         case furgoperfectoDefault
 //        case bicycle
 //        case tricycle
     }
-    
+
     var type: FurgoperfectoType = .furgoperfectoDefault
-    
+
     private var latitude: CLLocationDegrees = 0
     private var longitude: CLLocationDegrees = 0
     public var title: String?
     public var id: Int?
     public var furgoperfecto: FurgoperfectoModel?
-    
+
     // This property must be key-value observable, which the `@objc dynamic` attributes provide.
     @objc dynamic var coordinate: CLLocationCoordinate2D {
         get {
@@ -36,6 +36,5 @@ class FurgoperfectoAnnotation: NSObject, Decodable, MKAnnotation {
             longitude = newValue.longitude
         }
     }
-    
-    
+
 }

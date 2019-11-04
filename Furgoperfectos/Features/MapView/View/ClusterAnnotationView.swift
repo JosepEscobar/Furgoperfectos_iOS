@@ -9,26 +9,26 @@
 import MapKit
 
 class ClusterAnnotationView: MKAnnotationView {
-    
+
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         collisionMode = .circle
         centerOffset = CGPoint(x: 0, y: -10) // Offset center point to animate better with marker annotations
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     /// - Tag: CustomCluster
     override func prepareForDisplay() {
         super.prepareForDisplay()
-        
+
         // Move to a background thread to do some long running work
         DispatchQueue.global(qos: .userInteractive).async {
             if let cluster = self.annotation as? MKClusterAnnotation {
                 let totalBikes = cluster.memberAnnotations.count
-                
+
 //                if self.count(furgoperfectoType: .furgoperfectoDefault) > 0 {
                 let image = self.drawUnicycleCount(count: totalBikes)
                 DispatchQueue.main.async {
@@ -41,7 +41,7 @@ class ClusterAnnotationView: MKAnnotationView {
 //                        self.image = image
 //                    }
 //                }
-                
+
                 if self.count(furgoperfectoType: .furgoperfectoDefault) > 0 {
                     DispatchQueue.main.async {
                         self.displayPriority = .defaultHigh
@@ -53,24 +53,24 @@ class ClusterAnnotationView: MKAnnotationView {
                 }
             }
         }
-        
+
     }
-    
+
     private func drawRatioBicycleToTricycle(_ tricycleCount: Int, to totalBikes: Int) -> UIImage {
         return drawRatio(tricycleCount, to: totalBikes, fractionColor: UIColor.tricycleColor, wholeColor: UIColor.bicycleColor)
     }
-    
+
     private func drawUnicycleCount(count: Int) -> UIImage {
         return drawRatio(0, to: count, fractionColor: nil, wholeColor: UIColor.unicycleColor)
     }
-    
+
     private func drawRatio(_ fraction: Int, to whole: Int, fractionColor: UIColor?, wholeColor: UIColor?) -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 40, height: 40))
         return renderer.image { _ in
             // Fill full circle with wholeColor
             wholeColor?.setFill()
             UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 40, height: 40)).fill()
-            
+
             // Fill pie with fractionColor
             fractionColor?.setFill()
             let piePath = UIBezierPath()
@@ -80,11 +80,11 @@ class ClusterAnnotationView: MKAnnotationView {
             piePath.addLine(to: CGPoint(x: 20, y: 20))
             piePath.close()
             piePath.fill()
-            
+
             // Fill inner circle with white color
             UIColor.translucentButtonColor?.setFill()
             UIBezierPath(ovalIn: CGRect(x: 4, y: 4, width: 32, height: 32)).fill()
-            
+
             // Finally draw count text vertically and horizontally centered
             let attributes = [ NSAttributedString.Key.foregroundColor: UIColor.black,
                                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)]
@@ -94,12 +94,12 @@ class ClusterAnnotationView: MKAnnotationView {
             text.draw(in: rect, withAttributes: attributes)
         }
     }
-    
+
     private func count(furgoperfectoType type: FurgoperfectoAnnotation.FurgoperfectoType) -> Int {
         guard let cluster = annotation as? MKClusterAnnotation else {
             return 0
         }
-        
+
         return cluster.memberAnnotations.filter { member -> Bool in
             guard let furgoperfecto = member as? FurgoperfectoAnnotation else {
                 fatalError("Found unexpected annotation type")
@@ -108,4 +108,3 @@ class ClusterAnnotationView: MKAnnotationView {
             }.count
     }
 }
-

@@ -10,17 +10,17 @@ import UIKit
 import MapKit
 
 class MapViewModel: NSObject {
-    
+
     private var annotationsArray: [FurgoperfectoAnnotation] = []
-    
+
     var numberOfFurgoperfectos: Int {
         return FurgoperfectosRepository.shared.arrayFurgoperfectos.count
     }
-    
+
     var annotations: [FurgoperfectoAnnotation] {
         return annotationsArray
     }
-    
+
     // Fetch Data from source
     ///
     /// - Parameters:
@@ -33,8 +33,9 @@ class MapViewModel: NSObject {
                           serverFailure serverFail : @escaping ((NSError) -> Void),
                           businessFailure businessFail : @escaping ((NSError) -> Void),
                           emptyList empty: @escaping((NSError) -> Void)) {
-        
+
         FurgoperfectosRepository.shared.fetchData(success: {
+            self.gatherDataFromCoordiantes()
             self.annotationsBuilder()
             succeed()
         }, networkFailure: { (error) in
@@ -46,24 +47,37 @@ class MapViewModel: NSObject {
         }) { (error) in
             // do something
         }
-        
-        
+
     }
-    
+
     private func annotationsBuilder() {
         for furgoperfecto in FurgoperfectosRepository.shared.arrayFurgoperfectos {
+            guard let lat = furgoperfecto.lat,
+                let lng = furgoperfecto.lng,
+                let latitudeVal = Double(lat),
+                let longitudeVal = Double(lng) else {
+                return
+            }
+
             let annotation: FurgoperfectoAnnotation = FurgoperfectoAnnotation()
-            if let latitude = CLLocationDegrees(exactly: Double(furgoperfecto.lng!) ?? 0.0), let longitude = CLLocationDegrees(exactly: Double(furgoperfecto.lat!) ?? 0.0) {
+            if let latitude = CLLocationDegrees(exactly: longitudeVal),
+                let longitude = CLLocationDegrees(exactly: latitudeVal) {
                 annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
                 annotation.title = furgoperfecto.nombre
                 annotation.furgoperfecto = furgoperfecto
-                
+
                 if let id = furgoperfecto.id {
                     annotation.id = Int(id)
                 }
-                
+
                 annotationsArray.append(annotation)
             }
+        }
+    }
+
+    private func gatherDataFromCoordiantes() {
+        for furgoperfecto in FurgoperfectosRepository.shared.arrayFurgoperfectos {
+            furgoperfecto.getDataFromCoordinates()
         }
     }
 

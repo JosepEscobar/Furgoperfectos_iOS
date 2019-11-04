@@ -9,15 +9,15 @@
 import UIKit
 
 class FurgoperfectoMapAccessoryView: UIView {
-    
+
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var servicesLabel: UILabel!
     @IBOutlet weak var servicesSatckView: UIStackView!
     @IBOutlet weak var moreInfoButon: UIButton!
-    
+
     @IBAction func moreInfoButtonPushed(_ sender: Any) {
     }
-    
+
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

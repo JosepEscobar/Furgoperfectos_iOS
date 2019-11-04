@@ -9,23 +9,23 @@
 import UIKit
 
 class ListViewModel: NSObject {
-    
+
     var numberOfFurgoperfectos: Int {
         return FurgoperfectosRepository.shared.arrayFurgoperfectos.count
     }
-    
+
     func getName(index: Int) -> String {
         return FurgoperfectosRepository.shared.arrayFurgoperfectos[index].nombre ?? ""
     }
-    
+
     func getDescription(index: Int) -> String {
-        return FurgoperfectosRepository.shared.arrayFurgoperfectos[index].html ?? ""
+        return "\(FurgoperfectosRepository.shared.arrayFurgoperfectos[index].generatedCountry ?? "") \(FurgoperfectosRepository.shared.arrayFurgoperfectos[index].generatedCity ?? "") \(FurgoperfectosRepository.shared.arrayFurgoperfectos[index].generatedAddress ?? "")"
     }
-    
+
     func getImage(index: Int) -> String {
         return FurgoperfectosRepository.shared.arrayFurgoperfectos[index].imagen ?? ""
     }
-    
+
     // Fetch Data from source
     ///
     /// - Parameters:
@@ -38,7 +38,7 @@ class ListViewModel: NSObject {
                           serverFailure serverFail : @escaping ((NSError) -> Void),
                           businessFailure businessFail : @escaping ((NSError) -> Void),
                           emptyList empty: @escaping((NSError) -> Void)) {
-        
+
         FurgoperfectosRepository.shared.fetchData(success: {
             succeed()
         }, networkFailure: { (error) in
@@ -50,7 +50,7 @@ class ListViewModel: NSObject {
         }) { (error) in
             // do something
         }
-        
+
     }
 
 }

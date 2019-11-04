@@ -10,10 +10,10 @@ import UIKit
 import warqLog
 
 class FurgoperfectosRepository: NSObject {
-    
+
     static let shared: FurgoperfectosRepository = FurgoperfectosRepository()
     var arrayFurgoperfectos: [FurgoperfectoModel] = []
-    
+
     // Fetch Data from source
     ///
     /// - Parameters:
@@ -26,28 +26,27 @@ class FurgoperfectosRepository: NSObject {
                           serverFailure serverFail : @escaping ((NSError) -> Void),
                           businessFailure businessFail : @escaping ((NSError) -> Void),
                           emptyList empty: @escaping((NSError) -> Void)) {
-        
+
         guard arrayFurgoperfectos.isEmpty else {
             WarqLog.debug("Data already loaded, loding from cache")
             succeed()
             return
         }
-        
+
         guard let url = URL(string: apiGetEverithingLight) else {
             succeed()
             return
         }
-        
+
         let task = URLSession.shared.furgoperfectosResponseTask(with: url) { furgoperfectosResponse, response, error in
             if let furgoperfectosResponse = furgoperfectosResponse {
-
 
                 self.arrayFurgoperfectos = furgoperfectosResponse
                 DispatchQueue.main.async {
                     WarqLog.debug("Data loaded from server")
                     succeed()
                 }
-                
+
             }
         }
         task.resume()

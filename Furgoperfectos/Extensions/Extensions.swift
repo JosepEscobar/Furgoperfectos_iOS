@@ -10,15 +10,15 @@ import Foundation
 import MapKit
 
 extension String {
-    func utf8DecodedString()-> String {
+    func utf8DecodedString() -> String {
         let messageData = self.data(using: .utf8)
-        if let message = String(data: messageData!, encoding: .nonLossyASCII){
+        if let message = String(data: messageData!, encoding: .nonLossyASCII) {
             return message
         }
         return ""
     }
 
-    func utf8EncodedString()-> String {
+    func utf8EncodedString() -> String {
         let messageData = self.data(using: .nonLossyASCII)
         let message = String(data: messageData!, encoding: .utf8)
         return message ?? ""
@@ -26,13 +26,13 @@ extension String {
 }
 
 extension UIImage {
-    
+
     func filled(with color: UIColor) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         color.setFill()
         guard let context = UIGraphicsGetCurrentContext() else { return self }
         context.translateBy(x: 0, y: size.height)
-        context.scaleBy(x: 1.0, y: -1.0);
+        context.scaleBy(x: 1.0, y: -1.0)
         context.setBlendMode(CGBlendMode.normal)
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         guard let mask = self.cgImage else { return self }
@@ -42,11 +42,11 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return newImage
     }
-    
+
     static let pin = UIImage(named: "pin")?.filled(with: .green)
     static let pin2 = UIImage(named: "pin2")?.filled(with: .green)
     static let me = UIImage(named: "me")?.filled(with: .blue)
-    
+
 }
 
 extension UIColor {

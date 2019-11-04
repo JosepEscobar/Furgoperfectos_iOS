@@ -32,7 +32,6 @@ class FurgoperfectoAnnotationView: MKMarkerAnnotationView {
     }
 }
 
-
 //// #MARK: DEMO FOR OTHER TYPES - NOT USED NOW
 /// - Tag: BicycleAnnotationView
 //class BicycleAnnotationView: MKMarkerAnnotationView {

@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 class ListTableViewController: UITableViewController {
-    
+
     var listViewModel = ListViewModel()
 
     override func viewDidLoad() {
@@ -22,22 +22,22 @@ class ListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         fetchData()
     }
-    
+
     func fetchData() {
         listViewModel.fetchData(success: {
             self.tableView.reloadData()
         }, networkFailure: { (error) in
-            
+
         }, serverFailure: { (error) in
-            
+
         }, businessFailure: { (error) in
-            
+
         }) { (error) in
-            
+
         }
     }
 
@@ -45,7 +45,6 @@ class ListTableViewController: UITableViewController {
         return listViewModel.numberOfFurgoperfectos
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "listReuseIdentifier", for: indexPath) as? ListTableViewCell {
             // Configure the cell...
@@ -53,13 +52,12 @@ class ListTableViewController: UITableViewController {
             let description = listViewModel.getDescription(index: indexPath.row)
             let imageURL = listViewModel.getImage(index: indexPath.row)
             cell.configureCell(title: title, description: description, imageURL: imageURL)
-            
+
             return cell
         } else {
             return UITableViewCell()
         }
     }
- 
 
     /*
     // Override to support conditional editing of the table view.
