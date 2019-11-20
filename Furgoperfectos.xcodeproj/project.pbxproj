@@ -223,7 +223,7 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		4885F1C1236F42CE003FF77D /* DetailView */ = {
+		4885F1C1236F42CE003FF77D /* DetailView Scene */ = {
 			isa = PBXGroup;
 			children = (
 				4885F1E7236F482F003FF77D /* DetailFurgoperfectoPresenter.swift */,
@@ -233,7 +233,7 @@
 				4885F1EB236F482F003FF77D /* DetailFurgoperfectoViewController.swift */,
 				4885F1EC236F482F003FF77D /* DetailFurgoperfectoInteractor.swift */,
 			);
-			path = DetailView;
+			path = "DetailView Scene";
 			sourceTree = "<group>";
 		};
 		48BD1A8B22382415000AF785 /* ViewModel */ = {
@@ -321,7 +321,7 @@
 				48CF531E222DA3F000C4F911 /* Main.storyboard */,
 				48CF5349222DA4A900C4F911 /* MapView */,
 				48CF534A222DA4B300C4F911 /* ListView */,
-				4885F1C1236F42CE003FF77D /* DetailView */,
+				4885F1C1236F42CE003FF77D /* DetailView Scene */,
 			);
 			path = Features;
 			sourceTree = "<group>";
