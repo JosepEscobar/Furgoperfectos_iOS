@@ -14,6 +14,7 @@
 		48301CE223F1DCDB00B3867B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48301CE123F1DCDB00B3867B /* SceneDelegate.swift */; };
 		48301CE823F1E89200B3867B /* MapViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48301CE723F1E89200B3867B /* MapViewControllerRepresentable.swift */; };
 		48301CEA23F1EB4300B3867B /* ListTableViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48301CE923F1EB4300B3867B /* ListTableViewControllerRepresentable.swift */; };
+		48301CF223F205EB00B3867B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48301CF123F205EB00B3867B /* ListView.swift */; };
 		4837C7EF224427010060F89D /* FurgoperfectoMapAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4837C7EE224427010060F89D /* FurgoperfectoMapAccessoryView.xib */; };
 		4837C7F1224427170060F89D /* FurgoperfectoMapAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4837C7F0224427170060F89D /* FurgoperfectoMapAccessoryView.swift */; };
 		48429232222DACD5002B2C2C /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429231222DACD5002B2C2C /* ListTableViewController.swift */; };
@@ -74,6 +75,7 @@
 		48301CE123F1DCDB00B3867B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		48301CE723F1E89200B3867B /* MapViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		48301CE923F1EB4300B3867B /* ListTableViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		48301CF123F205EB00B3867B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		4837C7EE224427010060F89D /* FurgoperfectoMapAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurgoperfectoMapAccessoryView.xib; sourceTree = "<group>"; };
 		4837C7F0224427170060F89D /* FurgoperfectoMapAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectoMapAccessoryView.swift; sourceTree = "<group>"; };
 		48429231222DACD5002B2C2C /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
@@ -154,12 +156,13 @@
 		48301CDC23F1DB5E00B3867B /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				48301CDF23F1DC9700B3867B /* MainView.swift */,
+				48301CF323F2061600B3867B /* New List View */,
 				48301CE323F1DEBE00B3867B /* UIComponents */,
 				48CF531E222DA3F000C4F911 /* Main.storyboard */,
 				48CF5349222DA4A900C4F911 /* MapView */,
 				48CF534A222DA4B300C4F911 /* ListView */,
 				4885F1C1236F42CE003FF77D /* DetailView Scene */,
-				48301CDF23F1DC9700B3867B /* MainView.swift */,
 			);
 			path = "Presentation Layer";
 			sourceTree = "<group>";
@@ -186,6 +189,14 @@
 			children = (
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		48301CF323F2061600B3867B /* New List View */ = {
+			isa = PBXGroup;
+			children = (
+				48301CF123F205EB00B3867B /* ListView.swift */,
+			);
+			path = "New List View";
 			sourceTree = "<group>";
 		};
 		4837C7ED2243D7E90060F89D /* View */ = {
@@ -621,6 +632,7 @@
 				4885F1F0236F482F003FF77D /* DetailFurgoperfectoModels.swift in Sources */,
 				48301CE223F1DCDB00B3867B /* SceneDelegate.swift in Sources */,
 				48429234222DACF1002B2C2C /* MapViewModel.swift in Sources */,
+				48301CF223F205EB00B3867B /* ListView.swift in Sources */,
 				4885F1B7236EFA5C003FF77D /* ListTableViewCell.swift in Sources */,
 				4885F1BB236F1488003FF77D /* MapViewCLLocationManagerDelegate.swift in Sources */,
 				4885F1F2236F482F003FF77D /* DetailFurgoperfectoInteractor.swift in Sources */,

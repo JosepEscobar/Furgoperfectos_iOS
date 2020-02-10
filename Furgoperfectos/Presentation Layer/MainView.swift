@@ -17,7 +17,8 @@ struct MainView: View {
                     Text("Mapa")
                 }
 
-            ListTableViewController()
+//            ListTableViewController()
+            ListView(viewModel: NewListViewModel())
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Lista")

@@ -6,10 +6,74 @@
 //  Copyright © 2019 Josep Escobar. All rights reserved.
 //
 
-import UIKit
+import SwiftUI
+import Combine
 
-final class ListViewModel: NSObject {
+class FurgoperfectoViewModel: NSObject, Identifiable {
+    
+    var name: String
+    var descriptionItem: String
+    var image: String
+    
+    init(name: String?, description: String, image: String) {
+        self.name = name ?? "No name"
+        self.descriptionItem = description
+        self.image = image
+    }
 
+}
+
+class NewListViewModel: ObservableObject {
+    let didChange = PassthroughSubject<NewListViewModel, Never>()
+    
+    var arrayFurgoperfectos: [FurgoperfectoViewModel] = [] {
+        didSet {
+            didChange.send(self)
+        }
+    }
+    
+    init() {
+        
+        fetchData(success: {
+            
+        }, networkFailure: { (NSError) in
+            
+        }, serverFailure: { (NSError) in
+            
+        }, businessFailure: { (NSError) in
+            
+        }, emptyList: { error in
+        })
+    }
+    
+    
+    public func fetchData(success succeed : @escaping (() -> Void),
+                          networkFailure networkFail : @escaping ((NSError) -> Void),
+                          serverFailure serverFail : @escaping ((NSError) -> Void),
+                          businessFailure businessFail : @escaping ((NSError) -> Void),
+                          emptyList empty: @escaping((NSError) -> Void)) {
+        
+        FurgoperfectosRepository.shared.fetchData(success: {
+            self.arrayFurgoperfectos = FurgoperfectosRepository.shared.arrayFurgoperfectos.map { FurgoperfectoViewModel(name: $0.nombre,
+                                                                                                                        description: "",
+                                                                                                                        image: $0.imagen ?? ""
+                ) }
+        }, networkFailure: { (error) in
+            // do something
+        }, serverFailure: { (error) in
+            // do something
+        }, businessFailure: { (error) in
+            // do something
+        }) { (error) in
+            // do something
+        }
+
+    }
+
+}
+
+final class ListViewModel {
+    
     var numberOfFurgoperfectos: Int {
         return FurgoperfectosRepository.shared.arrayFurgoperfectos.count
     }

@@ -105,23 +105,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWy-cE-hi7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604" y="134"/>
-        </scene>
-        <!--Más-->
-        <scene sceneID="AM4-AX-Ho4">
-            <objects>
-                <viewController storyboardIdentifier="MasViewController" title="Más" id="UJU-O3-YME" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HAT-Ug-9Tn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="bkh-Uq-JOv"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="vp3-ir-goJ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="49z-oA-JFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1724" y="131"/>
+            <point key="canvasLocation" x="4" y="134"/>
         </scene>
     </scenes>
     <resources>
