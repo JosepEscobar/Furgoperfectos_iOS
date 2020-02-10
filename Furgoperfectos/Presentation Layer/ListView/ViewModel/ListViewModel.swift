@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListViewModel: NSObject {
+final class ListViewModel: NSObject {
 
     var numberOfFurgoperfectos: Int {
         return FurgoperfectosRepository.shared.arrayFurgoperfectos.count

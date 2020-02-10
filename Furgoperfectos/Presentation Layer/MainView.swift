@@ -14,13 +14,13 @@ struct MainView: View {
             MapViewController()
                 .tabItem {
                     Image(systemName: "map")
-                    Text("Map")
+                    Text("Mapa")
                 }
 
             ListTableViewController()
                 .tabItem {
                     Image(systemName: "list.bullet")
-                    Text("List")
+                    Text("Lista")
                 }
         }
     }

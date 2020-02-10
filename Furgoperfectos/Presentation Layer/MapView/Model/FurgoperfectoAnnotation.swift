@@ -8,7 +8,7 @@
 
 import MapKit
 
-class FurgoperfectoAnnotation: NSObject, Decodable, MKAnnotation {
+final class FurgoperfectoAnnotation: NSObject, Decodable, MKAnnotation {
 
     enum FurgoperfectoType: Int, Decodable {
         case furgoperfectoDefault

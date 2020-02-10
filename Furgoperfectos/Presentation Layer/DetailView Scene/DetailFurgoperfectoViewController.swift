@@ -12,7 +12,7 @@ protocol DetailFurgoperfectoDisplayLogic: class {
     func displaySomething(viewModel: DetailFurgoperfecto.Something.ViewModel)
 }
 
-class DetailFurgoperfectoViewController: UIViewController, DetailFurgoperfectoDisplayLogic {
+final class DetailFurgoperfectoViewController: UIViewController, DetailFurgoperfectoDisplayLogic {
     var interactor: DetailFurgoperfectoBusinessLogic?
     var router: (NSObjectProtocol & DetailFurgoperfectoRoutingLogic & DetailFurgoperfectoDataPassing)?
 

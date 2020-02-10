@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FurgoperfectoMapAccessoryView: UIView {
+final class FurgoperfectoMapAccessoryView: UIView {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var servicesLabel: UILabel!

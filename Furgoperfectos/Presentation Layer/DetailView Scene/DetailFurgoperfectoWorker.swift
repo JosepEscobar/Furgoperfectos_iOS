@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailFurgoperfectoWorker {
+final class DetailFurgoperfectoWorker {
     func doSomeWork() {
     }
 }

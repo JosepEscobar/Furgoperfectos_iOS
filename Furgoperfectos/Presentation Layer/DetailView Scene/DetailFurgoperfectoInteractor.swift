@@ -16,7 +16,7 @@ protocol DetailFurgoperfectoDataStore {
     //var name: String { get set }
 }
 
-class DetailFurgoperfectoInteractor: DetailFurgoperfectoBusinessLogic, DetailFurgoperfectoDataStore {
+final class DetailFurgoperfectoInteractor: DetailFurgoperfectoBusinessLogic, DetailFurgoperfectoDataStore {
     var presenter: DetailFurgoperfectoPresentationLogic?
     var worker: DetailFurgoperfectoWorker?
     //var name: String = ""

@@ -16,7 +16,7 @@ protocol DetailFurgoperfectoDataPassing {
     var dataStore: DetailFurgoperfectoDataStore? { get }
 }
 
-class DetailFurgoperfectoRouter: NSObject, DetailFurgoperfectoRoutingLogic, DetailFurgoperfectoDataPassing {
+final class DetailFurgoperfectoRouter: NSObject, DetailFurgoperfectoRoutingLogic, DetailFurgoperfectoDataPassing {
     weak var viewController: DetailFurgoperfectoViewController?
     var dataStore: DetailFurgoperfectoDataStore?
 

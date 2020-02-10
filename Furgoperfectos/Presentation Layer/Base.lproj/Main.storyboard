@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jja-SS-vIP">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="E9r-ZZ-YmR"/>
                                 </connections>
@@ -38,42 +38,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-679" y="134"/>
-        </scene>
-        <!--Mapa-->
-        <scene sceneID="gbd-cc-Qcl">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SmN-pY-4dN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mapa" image="map_icon" id="MfH-hO-1uH"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F85-nD-1Xa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="veE-8F-GhP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mgx-WD-PSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1618" y="134"/>
-        </scene>
-        <!--List-->
-        <scene sceneID="bW9-6S-wuB">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j51-8C-00a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" id="3ub-ei-di0"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6pB-AD-2sH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.6588235294" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VtE-2K-PQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="134" y="1104"/>
         </scene>
         <!--Lista-->
         <scene sceneID="IWQ-kr-0tg">
@@ -141,66 +105,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWy-cE-hi7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925.60000000000002" y="1102.3988005997003"/>
-        </scene>
-        <!--Lista-->
-        <scene sceneID="kMD-Dq-bLq">
-            <objects>
-                <navigationController storyboardIdentifier="listNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="ezt-ow-KbD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lista" image="list_icon" id="uxQ-5A-acS"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jqz-p6-wJm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="kRS-rn-6cx" kind="relationship" relationship="rootViewController" id="QSy-gH-X6t"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wbf-Xv-Zk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="134" y="1104"/>
-        </scene>
-        <!--Más-->
-        <scene sceneID="oXa-Nb-JIX">
-            <objects>
-                <navigationController storyboardIdentifier="moreNavigationController" title="Más" automaticallyAdjustsScrollViewInsets="NO" id="txM-vq-I90" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="gNX-hT-8QZ"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r8n-LN-adH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="et6-ju-ZbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="985" y="134"/>
-        </scene>
-        <!--Más-->
-        <scene sceneID="uMm-Cl-KiL">
-            <objects>
-                <navigationController title="Más" automaticallyAdjustsScrollViewInsets="NO" id="X2U-bT-V8i" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="3gn-QN-VMY"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cY8-TZ-m2e">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="UJU-O3-YME" kind="relationship" relationship="rootViewController" id="7t9-4J-371"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YAY-pk-OBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="985" y="134"/>
+            <point key="canvasLocation" x="604" y="134"/>
         </scene>
         <!--Más-->
         <scene sceneID="AM4-AX-Ho4">
             <objects>
-                <viewController title="Más" id="UJU-O3-YME" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MasViewController" title="Más" id="UJU-O3-YME" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HAT-Ug-9Tn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,7 +126,5 @@
     </scenes>
     <resources>
         <image name="furgo_transparent_144" width="72" height="72"/>
-        <image name="list_icon" width="24" height="24"/>
-        <image name="map_icon" width="25" height="25"/>
     </resources>
 </document>

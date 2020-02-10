@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 import warqLog
 
-class ListTableViewCell: UITableViewCell {
+final class ListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var furgoperfectoImageView: UIImageView!
     @IBOutlet weak var furgoperfectoTitleLabel: UILabel!

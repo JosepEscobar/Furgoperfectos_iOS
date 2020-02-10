@@ -167,7 +167,8 @@
 		48301CDD23F1DB7000B3867B /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
-				48BD1A8C22382430000AF785 /* FurgoperfectosData */,
+				48429236222DAD2E002B2C2C /* FurgoperfectosRepository.swift */,
+				48429238222DAD3F002B2C2C /* FurgoperfectoModel.swift */,
 				4842923A222DBE12002B2C2C /* APIEndpoints.swift */,
 			);
 			path = "Data Layer";
@@ -217,22 +218,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		4842922F222DAC52002B2C2C /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				48429236222DAD2E002B2C2C /* FurgoperfectosRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		48429230222DAC6A002B2C2C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				48429238222DAD3F002B2C2C /* FurgoperfectoModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		4885F1B5236EFA36003FF77D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,15 +264,6 @@
 				48BD1A8E2238248C000AF785 /* ListViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		48BD1A8C22382430000AF785 /* FurgoperfectosData */ = {
-			isa = PBXGroup;
-			children = (
-				4842922F222DAC52002B2C2C /* Repository */,
-				48429230222DAC6A002B2C2C /* Model */,
-			);
-			path = FurgoperfectosData;
 			sourceTree = "<group>";
 		};
 		48BD1A8D2238245D000AF785 /* Controller */ = {

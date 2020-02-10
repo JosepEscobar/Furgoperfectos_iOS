@@ -9,7 +9,7 @@
 import UIKit
 import warqLog
 
-class FurgoperfectosRepository: NSObject {
+final class FurgoperfectosRepository: NSObject {
 
     static let shared: FurgoperfectosRepository = FurgoperfectosRepository()
     var arrayFurgoperfectos: [FurgoperfectoModel] = []
