@@ -12,7 +12,7 @@ import PKHUD
 import Kingfisher
 import warqLog
 
-class MapViewController: UIViewController {
+final class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     private let mapViewModel = MapViewModel()

@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class ListTableViewController: UITableViewController {
+final class ListTableViewController: UITableViewController {
 
     var listViewModel = ListViewModel()
 

@@ -32,7 +32,7 @@ class ListTableViewCell: UITableViewCell {
         furgoperfectoDescriptionLabel.text = description
         if let url = URL(string: imageURL) {
             let processor = DownsamplingImageProcessor(size: furgoperfectoImageView.bounds.size)
-            >> RoundCornerImageProcessor(cornerRadius: 10)
+                |> RoundCornerImageProcessor(cornerRadius: 10)
             furgoperfectoImageView.kf.indicatorType = .activity
             furgoperfectoImageView.kf.setImage(
                 with: url,
