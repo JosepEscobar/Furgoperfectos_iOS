@@ -40,7 +40,7 @@ class ListViewModel: ObservableObject {
 }
 
 extension ListViewModel: FurgoperfectosRepositoring {
-    #warning("TODO: @josepescobar, 25/07/2020, Remove force unwap on URL")
+    #warning("TODO: @josepescobar, 25/07/2020, Remove force unwrap on URL")
     func provideFurgoperfectos(_ furgoperfectosArray: [FurgoperfectoModel]) {
         arrayFurgoperfectos = furgoperfectosArray.map {
             FurgoperfectoViewModel(name: $0.nombre,
