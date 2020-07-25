@@ -27,12 +27,6 @@
 		4885F1B7236EFA5C003FF77D /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1B6236EFA5C003FF77D /* ListTableViewCell.swift */; };
 		4885F1B9236F1464003FF77D /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1B8236F1464003FF77D /* MapViewDelegate.swift */; };
 		4885F1BB236F1488003FF77D /* MapViewCLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1BA236F1488003FF77D /* MapViewCLLocationManagerDelegate.swift */; };
-		4885F1ED236F482F003FF77D /* DetailFurgoperfectoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1E7236F482F003FF77D /* DetailFurgoperfectoPresenter.swift */; };
-		4885F1EE236F482F003FF77D /* DetailFurgoperfectoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1E8236F482F003FF77D /* DetailFurgoperfectoWorker.swift */; };
-		4885F1EF236F482F003FF77D /* DetailFurgoperfectoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1E9236F482F003FF77D /* DetailFurgoperfectoRouter.swift */; };
-		4885F1F0236F482F003FF77D /* DetailFurgoperfectoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1EA236F482F003FF77D /* DetailFurgoperfectoModels.swift */; };
-		4885F1F1236F482F003FF77D /* DetailFurgoperfectoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1EB236F482F003FF77D /* DetailFurgoperfectoViewController.swift */; };
-		4885F1F2236F482F003FF77D /* DetailFurgoperfectoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1EC236F482F003FF77D /* DetailFurgoperfectoInteractor.swift */; };
 		48BD1A8922381CDA000AF785 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD1A8822381CDA000AF785 /* Extensions.swift */; };
 		48BD1A8F2238248C000AF785 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD1A8E2238248C000AF785 /* ListViewModel.swift */; };
 		48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF531A222DA3F000C4F911 /* AppDelegate.swift */; };
@@ -42,6 +36,7 @@
 		48CF5325222DA3F200C4F911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CF5323222DA3F200C4F911 /* LaunchScreen.storyboard */; };
 		48CF5330222DA3F200C4F911 /* FurgoperfectosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF532F222DA3F200C4F911 /* FurgoperfectosTests.swift */; };
 		48CF533B222DA3F200C4F911 /* FurgoperfectosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF533A222DA3F200C4F911 /* FurgoperfectosUITests.swift */; };
+		48EB358B24CCA1FB008B1648 /* DataErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB358A24CCA1FB008B1648 /* DataErrors.swift */; };
 		8E2201F11CD614DE12477E25 /* Pods_Furgoperfectos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D98C91ACC8B420FF2C948A /* Pods_Furgoperfectos.framework */; };
 		B09C47FDEDDF978D2F009E7C /* Pods_FurgoperfectosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC624CB25992E15562FDB6D /* Pods_FurgoperfectosUITests.framework */; };
 		E171B03D6532236DC6D59ECE /* Pods_FurgoperfectosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332E3991FE8ECE768317382A /* Pods_FurgoperfectosTests.framework */; };
@@ -88,12 +83,6 @@
 		4885F1B6236EFA5C003FF77D /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		4885F1B8236F1464003FF77D /* MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDelegate.swift; sourceTree = "<group>"; };
 		4885F1BA236F1488003FF77D /* MapViewCLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCLLocationManagerDelegate.swift; sourceTree = "<group>"; };
-		4885F1E7236F482F003FF77D /* DetailFurgoperfectoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFurgoperfectoPresenter.swift; sourceTree = "<group>"; };
-		4885F1E8236F482F003FF77D /* DetailFurgoperfectoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFurgoperfectoWorker.swift; sourceTree = "<group>"; };
-		4885F1E9236F482F003FF77D /* DetailFurgoperfectoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFurgoperfectoRouter.swift; sourceTree = "<group>"; };
-		4885F1EA236F482F003FF77D /* DetailFurgoperfectoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFurgoperfectoModels.swift; sourceTree = "<group>"; };
-		4885F1EB236F482F003FF77D /* DetailFurgoperfectoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFurgoperfectoViewController.swift; sourceTree = "<group>"; };
-		4885F1EC236F482F003FF77D /* DetailFurgoperfectoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFurgoperfectoInteractor.swift; sourceTree = "<group>"; };
 		48BD1A8822381CDA000AF785 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		48BD1A8E2238248C000AF785 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		48CF5317222DA3F000C4F911 /* Furgoperfectos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furgoperfectos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +98,7 @@
 		48CF5336222DA3F200C4F911 /* FurgoperfectosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FurgoperfectosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CF533A222DA3F200C4F911 /* FurgoperfectosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectosUITests.swift; sourceTree = "<group>"; };
 		48CF533C222DA3F200C4F911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48EB358A24CCA1FB008B1648 /* DataErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataErrors.swift; sourceTree = "<group>"; };
 		4FDBD3D9007C63628CD0B37C /* Pods-Furgoperfectos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Furgoperfectos.debug.xcconfig"; path = "Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos.debug.xcconfig"; sourceTree = "<group>"; };
 		61ACBD92EC4BC09E1C5B1DCC /* Pods-FurgoperfectosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurgoperfectosUITests.release.xcconfig"; path = "Target Support Files/Pods-FurgoperfectosUITests/Pods-FurgoperfectosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8D06E6B50F95F956C69137AE /* Pods-Furgoperfectos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Furgoperfectos.release.xcconfig"; path = "Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +163,7 @@
 				48429236222DAD2E002B2C2C /* FurgoperfectosRepository.swift */,
 				48429238222DAD3F002B2C2C /* FurgoperfectoModel.swift */,
 				4842923A222DBE12002B2C2C /* APIEndpoints.swift */,
+				48EB358A24CCA1FB008B1648 /* DataErrors.swift */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -195,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				48301CF123F205EB00B3867B /* ListView.swift */,
+				48BD1A8E2238248C000AF785 /* ListViewModel.swift */,
 			);
 			path = "New List View";
 			sourceTree = "<group>";
@@ -259,12 +251,6 @@
 		4885F1C1236F42CE003FF77D /* DetailView Scene */ = {
 			isa = PBXGroup;
 			children = (
-				4885F1E7236F482F003FF77D /* DetailFurgoperfectoPresenter.swift */,
-				4885F1E8236F482F003FF77D /* DetailFurgoperfectoWorker.swift */,
-				4885F1E9236F482F003FF77D /* DetailFurgoperfectoRouter.swift */,
-				4885F1EA236F482F003FF77D /* DetailFurgoperfectoModels.swift */,
-				4885F1EB236F482F003FF77D /* DetailFurgoperfectoViewController.swift */,
-				4885F1EC236F482F003FF77D /* DetailFurgoperfectoInteractor.swift */,
 			);
 			path = "DetailView Scene";
 			sourceTree = "<group>";
@@ -272,7 +258,6 @@
 		48BD1A8B22382415000AF785 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				48BD1A8E2238248C000AF785 /* ListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -611,7 +596,6 @@
 				48301CE823F1E89200B3867B /* MapViewControllerRepresentable.swift in Sources */,
 				48429232222DACD5002B2C2C /* ListTableViewController.swift in Sources */,
 				48301CE023F1DC9700B3867B /* MainView.swift in Sources */,
-				4885F1EF236F482F003FF77D /* DetailFurgoperfectoRouter.swift in Sources */,
 				48301CEA23F1EB4300B3867B /* ListTableViewControllerRepresentable.swift in Sources */,
 				4842923B222DBE12002B2C2C /* APIEndpoints.swift in Sources */,
 				4885F1B4236EE942003FF77D /* URLSessionExtensions.swift in Sources */,
@@ -621,21 +605,17 @@
 				48009C472242E79D0086DE35 /* ClusterAnnotationView.swift in Sources */,
 				48CF531D222DA3F000C4F911 /* MapViewController.swift in Sources */,
 				48BD1A8922381CDA000AF785 /* Extensions.swift in Sources */,
-				4885F1ED236F482F003FF77D /* DetailFurgoperfectoPresenter.swift in Sources */,
 				48009C492242E7F30086DE35 /* FurgoperfectoAnnotation.swift in Sources */,
 				48429237222DAD2E002B2C2C /* FurgoperfectosRepository.swift in Sources */,
-				4885F1F1236F482F003FF77D /* DetailFurgoperfectoViewController.swift in Sources */,
+				48EB358B24CCA1FB008B1648 /* DataErrors.swift in Sources */,
 				48BD1A8F2238248C000AF785 /* ListViewModel.swift in Sources */,
-				4885F1EE236F482F003FF77D /* DetailFurgoperfectoWorker.swift in Sources */,
 				48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */,
 				48429239222DAD3F002B2C2C /* FurgoperfectoModel.swift in Sources */,
-				4885F1F0236F482F003FF77D /* DetailFurgoperfectoModels.swift in Sources */,
 				48301CE223F1DCDB00B3867B /* SceneDelegate.swift in Sources */,
 				48429234222DACF1002B2C2C /* MapViewModel.swift in Sources */,
 				48301CF223F205EB00B3867B /* ListView.swift in Sources */,
 				4885F1B7236EFA5C003FF77D /* ListTableViewCell.swift in Sources */,
 				4885F1BB236F1488003FF77D /* MapViewCLLocationManagerDelegate.swift in Sources */,
-				4885F1F2236F482F003FF77D /* DetailFurgoperfectoInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

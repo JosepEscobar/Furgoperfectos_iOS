@@ -33,53 +33,31 @@ class NewListViewModel: ObservableObject {
     }
     
     init() {
-        
-        fetchData(success: {
-            
-        }, networkFailure: { (NSError) in
-            
-        }, serverFailure: { (NSError) in
-            
-        }, businessFailure: { (NSError) in
-            
-        }, emptyList: { error in
-        })
+        FurgoperfectosRepository.shared.fetchData()
     }
-    
-    
-    public func fetchData(success succeed : @escaping (() -> Void),
-                          networkFailure networkFail : @escaping ((NSError) -> Void),
-                          serverFailure serverFail : @escaping ((NSError) -> Void),
-                          businessFailure businessFail : @escaping ((NSError) -> Void),
-                          emptyList empty: @escaping((NSError) -> Void)) {
-        
-        FurgoperfectosRepository.shared.fetchData(success: {
-            self.arrayFurgoperfectos = FurgoperfectosRepository.shared.arrayFurgoperfectos.map { FurgoperfectoViewModel(name: $0.nombre,
-                                                                                                                        description: "",
-                                                                                                                        image: $0.imagen ?? ""
-                ) }
-        }, networkFailure: { (error) in
-            // do something
-        }, serverFailure: { (error) in
-            // do something
-        }, businessFailure: { (error) in
-            // do something
-        }) { (error) in
-            // do something
+}
+
+extension NewListViewModel: FurgoperfectosRepositoring {
+    func provideFurgoperfectos(_ furgoperfectosArray: [FurgoperfectoModel]) {
+        arrayFurgoperfectos = furgoperfectosArray.map {
+            FurgoperfectoViewModel(name: $0.nombre,
+                                   description: "",
+                                   image: $0.imagen ?? "")
         }
-
     }
-
+    
+    func onError(_ error: Error) {
+    }
 }
 
 final class ListViewModel {
     
     var numberOfFurgoperfectos: Int {
-        return FurgoperfectosRepository.shared.arrayFurgoperfectos.count
+        FurgoperfectosRepository.shared.arrayFurgoperfectos.count
     }
 
     func getName(index: Int) -> String {
-        return FurgoperfectosRepository.shared.arrayFurgoperfectos[index].nombre ?? ""
+        FurgoperfectosRepository.shared.arrayFurgoperfectos[index].nombre ?? ""
     }
 
     func getDescription(index: Int) -> String {
