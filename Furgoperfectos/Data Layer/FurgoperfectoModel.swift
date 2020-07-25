@@ -11,8 +11,7 @@ import CoreLocation
 
 final class FurgoperfectoModel: Codable  {
 
-    let id, icono, nombre, lat: String?
-    let lng, html, htmlp: String?
+    let id, icono, nombre, lat, lng, html, htmlp: String?
     let link: String?
     let imagen: String?
     let autor, ancho, alto, destomtom: String?

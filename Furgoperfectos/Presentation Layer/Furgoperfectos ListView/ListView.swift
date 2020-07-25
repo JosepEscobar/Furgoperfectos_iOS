@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct ListView: View {
+    enum Constant {
+        static let loadingMessage = "Cargando..."
+    }
     
     @State var viewModel: ListViewModel
     
@@ -18,10 +21,16 @@ struct ListView: View {
                 HStack {
                     AsyncImage(
                         url: itemViewModel.imageURL,
-                        placeholder: Text("Cargando...")
-                        ).aspectRatio(contentMode: .fit)
+                        placeholder: Text(Constant.loadingMessage)
+                    ).aspectRatio(contentMode: .fit)
                         .frame(width: 150, height: 100)
-                    Text(itemViewModel.name)
+                        .padding(.trailing)
+                    VStack(alignment: .leading) {
+                        Text(itemViewModel.name)
+                        Text("A 3330km de tí")
+                            .foregroundColor(Color.gray)
+                    }
+                    
                 }
             }
         }
