@@ -9,49 +9,34 @@
 import UIKit
 import MapKit
 
-final class MapViewModel: NSObject {
+protocol MapViewModelStateProtocol: AnyObject {
+    func reloadData()
+}
+
+final class MapViewModel {
 
     private var annotationsArray: [FurgoperfectoAnnotation] = []
+    var arrayFurgoperfectos: [FurgoperfectoModel] = []
+    weak var delegate: MapViewModelStateProtocol?
+    var repository: FurgoperfectosRepository?
+    
 
     var numberOfFurgoperfectos: Int {
-        return FurgoperfectosRepository.shared.arrayFurgoperfectos.count
+        arrayFurgoperfectos.count
     }
 
     var annotations: [FurgoperfectoAnnotation] {
-        return annotationsArray
+        annotationsArray
     }
-
-    // Fetch Data from source
-    ///
-    /// - Parameters:
-    ///   - succeed: func - call function upon succeed
-    ///   - networkFail: func - call function upon netwrok fail
-    ///   - serverFail: func - call function upon server fail
-    ///   - businessFail: func - call function upon business fail
-    public func fetchData(success succeed : @escaping (() -> Void),
-                          networkFailure networkFail : @escaping ((NSError) -> Void),
-                          serverFailure serverFail : @escaping ((NSError) -> Void),
-                          businessFailure businessFail : @escaping ((NSError) -> Void),
-                          emptyList empty: @escaping((NSError) -> Void)) {
-
-        FurgoperfectosRepository.shared.fetchData(success: {
-            self.gatherDataFromCoordiantes()
-            self.annotationsBuilder()
-            succeed()
-        }, networkFailure: { (error) in
-            // do something
-        }, serverFailure: { (error) in
-            // do something
-        }, businessFailure: { (error) in
-            // do something
-        }) { (error) in
-            // do something
-        }
-
+    
+    init(delegate: MapViewModelStateProtocol) {
+        self.delegate = delegate
+        self.repository = FurgoperfectosRepository(delegate: self)
+        self.repository?.fetchData()
     }
 
     private func annotationsBuilder() {
-        for furgoperfecto in FurgoperfectosRepository.shared.arrayFurgoperfectos {
+        for furgoperfecto in arrayFurgoperfectos {
             guard let lat = furgoperfecto.lat,
                 let lng = furgoperfecto.lng,
                 let latitudeVal = Double(lat),
@@ -76,9 +61,23 @@ final class MapViewModel: NSObject {
     }
 
     private func gatherDataFromCoordiantes() {
-        for furgoperfecto in FurgoperfectosRepository.shared.arrayFurgoperfectos {
+        for furgoperfecto in arrayFurgoperfectos {
             furgoperfecto.getDataFromCoordinates()
         }
     }
 
+}
+
+extension MapViewModel: FurgoperfectosRepositoring {
+    func provideFurgoperfectos(_ furgoperfectosArray: [FurgoperfectoModel]) {
+        self.arrayFurgoperfectos = furgoperfectosArray
+        self.gatherDataFromCoordiantes()
+        self.annotationsBuilder()
+        self.delegate?.reloadData()
+    }
+    
+    func onError(_ error: Error) {
+    }
+    
+    
 }
