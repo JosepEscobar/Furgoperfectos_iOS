@@ -24,44 +24,19 @@ final class FurgoperfectosRepository {
         self.delegate = delegate
     }
 
-    func fetchData(success succeed : @escaping (() -> Void),
-                          networkFailure networkFail : @escaping ((NSError) -> Void),
-                          serverFailure serverFail : @escaping ((NSError) -> Void),
-                          businessFailure businessFail : @escaping ((NSError) -> Void),
-                          emptyList empty: @escaping((NSError) -> Void)) {
-
-        guard arrayFurgoperfectos.isEmpty else {
-            WarqLog.debug("Data already loaded, loding from cache")
-            succeed()
-            return
-        }
-
-        guard let url = URL(string: apiGetEverithingLight) else {
-            succeed()
-            return
-        }
-
-        let task = URLSession.shared.furgoperfectosResponseTask(with: url) { furgoperfectosResponse, response, error in
-            if let furgoperfectosResponse = furgoperfectosResponse {
-
-                self.arrayFurgoperfectos = furgoperfectosResponse
-                DispatchQueue.main.async {
-                    WarqLog.debug("Data loaded from server")
-                    succeed()
-                }
-
-            }
-        }
-        task.resume()
-    }
-    
     func fetchData() {
         guard let url = URL(string: apiGetEverithingLight) else {
             delegate?.onError(GlobalError.castingError)
             return
         }
 
-        let task = URLSession.shared.furgoperfectosResponseTask(with: url) { [weak self] furgoperfectosResponse, response, error in
+        let config = URLSessionConfiguration.default
+        config.requestCachePolicy = .returnCacheDataElseLoad
+        config.urlCache = nil
+        
+        let session = URLSession.init(configuration: config)
+
+        let task = session.furgoperfectosResponseTask(with: url) { [weak self] furgoperfectosResponse, response, error in
             if let furgoperfectosResponse = furgoperfectosResponse {
                 self?.arrayFurgoperfectos = furgoperfectosResponse
                 DispatchQueue.main.async {

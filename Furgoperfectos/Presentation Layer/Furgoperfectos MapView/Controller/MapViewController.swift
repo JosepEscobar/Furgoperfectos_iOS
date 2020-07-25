@@ -13,9 +13,8 @@ import Kingfisher
 import warqLog
 
 final class MapViewController: UIViewController {
-
     @IBOutlet weak var mapView: MKMapView!
-    private let mapViewModel = MapViewModel()
+    private var mapViewModel: MapViewModel?
     let locationManager = CLLocationManager()
     var userTrackingButton: MKUserTrackingButton!
     private var scaleView: MKScaleView!
@@ -67,20 +66,7 @@ final class MapViewController: UIViewController {
 
     func fetchData() {
         HUD.show(.label("Cargando Furgoperfectos..."))
-        mapViewModel.fetchData(success: {
-            //
-            self.mapView.addAnnotations(self.mapViewModel.annotations)
-            HUD.flash(.success, delay: 1.0)
-
-        }, networkFailure: { (error) in
-
-        }, serverFailure: { (error) in
-
-        }, businessFailure: { (error) in
-
-        }) { (error) in
-
-        }
+        mapViewModel = MapViewModel(delegate: self)
     }
 
     func requestLocationAccess() {
@@ -103,4 +89,12 @@ final class MapViewController: UIViewController {
         }
     }
 
+}
+
+extension MapViewController: MapViewModelStateProtocol {
+    func reloadData() {
+        guard let mapViewModel = mapViewModel else { return }
+        self.mapView.addAnnotations(mapViewModel.annotations)
+        HUD.flash(.success, delay: 1.0)
+    }
 }
