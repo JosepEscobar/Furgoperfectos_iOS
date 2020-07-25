@@ -142,10 +142,10 @@
 			children = (
 				48301CDF23F1DC9700B3867B /* MainView.swift */,
 				48CF531E222DA3F000C4F911 /* Main.storyboard */,
-				48301CF323F2061600B3867B /* New List View */,
+				48CF5349222DA4A900C4F911 /* Furgoperfectos MapView */,
+				48301CF323F2061600B3867B /* Furgoperfectos ListView */,
+				4885F1C1236F42CE003FF77D /* Furgoperfectos DetailView */,
 				48301CE323F1DEBE00B3867B /* UIComponents */,
-				48CF5349222DA4A900C4F911 /* MapView */,
-				4885F1C1236F42CE003FF77D /* DetailView Scene */,
 			);
 			path = "Presentation Layer";
 			sourceTree = "<group>";
@@ -175,13 +175,13 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
-		48301CF323F2061600B3867B /* New List View */ = {
+		48301CF323F2061600B3867B /* Furgoperfectos ListView */ = {
 			isa = PBXGroup;
 			children = (
 				48301CF123F205EB00B3867B /* ListView.swift */,
 				48BD1A8E2238248C000AF785 /* ListViewModel.swift */,
 			);
-			path = "New List View";
+			path = "Furgoperfectos ListView";
 			sourceTree = "<group>";
 		};
 		4837C7ED2243D7E90060F89D /* View */ = {
@@ -233,11 +233,11 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4885F1C1236F42CE003FF77D /* DetailView Scene */ = {
+		4885F1C1236F42CE003FF77D /* Furgoperfectos DetailView */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "DetailView Scene";
+			path = "Furgoperfectos DetailView";
 			sourceTree = "<group>";
 		};
 		48CF530E222DA3F000C4F911 = {
@@ -295,7 +295,7 @@
 			path = FurgoperfectosUITests;
 			sourceTree = "<group>";
 		};
-		48CF5349222DA4A900C4F911 /* MapView */ = {
+		48CF5349222DA4A900C4F911 /* Furgoperfectos MapView */ = {
 			isa = PBXGroup;
 			children = (
 				4837C7ED2243D7E90060F89D /* View */,
@@ -303,7 +303,7 @@
 				4842922E222DAC45002B2C2C /* ViewModel */,
 				4842922D222DAC3A002B2C2C /* Controller */,
 			);
-			path = MapView;
+			path = "Furgoperfectos MapView";
 			sourceTree = "<group>";
 		};
 		CEBFEE76D082FC8DE84AECDF /* Pods */ = {
