@@ -15,8 +15,14 @@ struct ListView: View {
     var body: some View {
         List(viewModel.arrayFurgoperfectos) { itemViewModel in
             VStack {
-                Text(itemViewModel.name)
-                Text(itemViewModel.image)
+                HStack {
+                    AsyncImage(
+                        url: itemViewModel.imageURL,
+                        placeholder: Text("Cargando...")
+                        ).aspectRatio(contentMode: .fit)
+                        .frame(width: 150, height: 100)
+                    Text(itemViewModel.name)
+                }
             }
         }
     }
