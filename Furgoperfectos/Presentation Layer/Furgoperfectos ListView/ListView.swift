@@ -16,21 +16,25 @@ struct ListView: View {
     @State var viewModel: ListViewModel
     
     var body: some View {
-        List(viewModel.arrayFurgoperfectos) { itemViewModel in
-            VStack {
-                HStack {
-                    AsyncImage(
-                        url: itemViewModel.imageURL,
-                        placeholder: Text(Constant.loadingMessage)
-                    ).aspectRatio(contentMode: .fit)
-                        .frame(width: 150, height: 100)
-                        .padding(.trailing)
-                    VStack(alignment: .leading) {
-                        Text(itemViewModel.name)
-                        Text("A 3330km de tí")
-                            .foregroundColor(Color.gray)
+        NavigationView {
+            List(viewModel.arrayFurgoperfectos) { itemViewModel in
+                NavigationLink(destination: FurgoperfectosDetailView(id: itemViewModel.id)) {
+                    VStack {
+                        HStack {
+                            AsyncImage(
+                                url: itemViewModel.imageURL,
+                                placeholder: Text(Constant.loadingMessage)
+                            ).aspectRatio(contentMode: .fit)
+                                .frame(width: 150, height: 100)
+                                .padding(.trailing)
+                            VStack(alignment: .leading) {
+                                Text(itemViewModel.name)
+                                Text("A 3330km de tí")
+                                    .foregroundColor(Color.gray)
+                            }
+                            
+                        }
                     }
-                    
                 }
             }
         }
