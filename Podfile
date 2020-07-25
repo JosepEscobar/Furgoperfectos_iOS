@@ -18,7 +18,7 @@ target 'Furgoperfectos' do
   pod 'PKHUD'
   
   # Private Pods
-   pod 'warqLog'
+  pod 'warqLog'
 
   target 'FurgoperfectosTests' do
     inherit! :search_paths

@@ -9,7 +9,7 @@ import MapKit
 private let multiWheelCycleClusterID = "multiFurgoperfectos"
 
 /// - Tag: UnicycleAnnotationView
-class FurgoperfectoAnnotationView: MKMarkerAnnotationView {
+final class FurgoperfectoAnnotationView: MKMarkerAnnotationView {
 
     static let ReuseID = "furgoperfectoAnnotation"
 
@@ -34,7 +34,7 @@ class FurgoperfectoAnnotationView: MKMarkerAnnotationView {
 
 //// #MARK: DEMO FOR OTHER TYPES - NOT USED NOW
 /// - Tag: BicycleAnnotationView
-//class BicycleAnnotationView: MKMarkerAnnotationView {
+//final class BicycleAnnotationView: MKMarkerAnnotationView {
 //
 //    static let ReuseID = "bicycleAnnotation"
 //
@@ -57,7 +57,7 @@ class FurgoperfectoAnnotationView: MKMarkerAnnotationView {
 //}
 
 //// #MARK: DEMO FOR OTHER TYPES - NOT USED NOW
-//class TricycleAnnotationView: MKMarkerAnnotationView {
+//final class TricycleAnnotationView: MKMarkerAnnotationView {
 //
 //    static let ReuseID = "tricycleAnnotation"
 //

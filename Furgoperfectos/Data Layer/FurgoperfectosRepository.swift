@@ -9,18 +9,21 @@
 import UIKit
 import warqLog
 
-class FurgoperfectosRepository: NSObject {
+protocol FurgoperfectosRepositoring: AnyObject {
+    func provideFurgoperfectos(_ furgoperfectosArray: [FurgoperfectoModel])
+    func onError(_ error: Error)
+}
 
+final class FurgoperfectosRepository {
+    #warning("TODO: @josepescobar, 25/07/2020, Remove shared instance and arrayFurgoperfectos and do it a permanent percistance")
     static let shared: FurgoperfectosRepository = FurgoperfectosRepository()
     var arrayFurgoperfectos: [FurgoperfectoModel] = []
+    weak var delegate: FurgoperfectosRepositoring?
 
-    // Fetch Data from source
-    ///
-    /// - Parameters:
-    ///   - succeed: func - call function upon succeed
-    ///   - networkFail: func - call function upon netwrok fail
-    ///   - serverFail: func - call function upon server fail
-    ///   - businessFail: func - call function upon business fail
+    init(delegate: FurgoperfectosRepositoring? = nil) {
+        self.delegate = delegate
+    }
+
     func fetchData(success succeed : @escaping (() -> Void),
                           networkFailure networkFail : @escaping ((NSError) -> Void),
                           serverFailure serverFail : @escaping ((NSError) -> Void),
@@ -47,6 +50,24 @@ class FurgoperfectosRepository: NSObject {
                     succeed()
                 }
 
+            }
+        }
+        task.resume()
+    }
+    
+    func fetchData() {
+        guard let url = URL(string: apiGetEverithingLight) else {
+            delegate?.onError(GlobalError.castingError)
+            return
+        }
+
+        let task = URLSession.shared.furgoperfectosResponseTask(with: url) { [weak self] furgoperfectosResponse, response, error in
+            if let furgoperfectosResponse = furgoperfectosResponse {
+                self?.arrayFurgoperfectos = furgoperfectosResponse
+                DispatchQueue.main.async {
+                    WarqLog.debug("Data loaded from server")
+                    self?.delegate?.provideFurgoperfectos(furgoperfectosResponse)
+                }
             }
         }
         task.resume()
