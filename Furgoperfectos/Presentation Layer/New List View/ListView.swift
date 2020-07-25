@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ListView: View {
     
-    @State var viewModel: NewListViewModel
+    @State var viewModel: ListViewModel
     
     var body: some View {
         List(viewModel.arrayFurgoperfectos) { itemViewModel in
@@ -24,6 +24,6 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView(viewModel: NewListViewModel())
+        ListView(viewModel: ListViewModel())
     }
 }

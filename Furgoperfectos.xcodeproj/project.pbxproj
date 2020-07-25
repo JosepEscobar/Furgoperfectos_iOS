@@ -13,18 +13,15 @@
 		48301CE023F1DC9700B3867B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48301CDF23F1DC9700B3867B /* MainView.swift */; };
 		48301CE223F1DCDB00B3867B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48301CE123F1DCDB00B3867B /* SceneDelegate.swift */; };
 		48301CE823F1E89200B3867B /* MapViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48301CE723F1E89200B3867B /* MapViewControllerRepresentable.swift */; };
-		48301CEA23F1EB4300B3867B /* ListTableViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48301CE923F1EB4300B3867B /* ListTableViewControllerRepresentable.swift */; };
 		48301CF223F205EB00B3867B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48301CF123F205EB00B3867B /* ListView.swift */; };
 		4837C7EF224427010060F89D /* FurgoperfectoMapAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4837C7EE224427010060F89D /* FurgoperfectoMapAccessoryView.xib */; };
 		4837C7F1224427170060F89D /* FurgoperfectoMapAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4837C7F0224427170060F89D /* FurgoperfectoMapAccessoryView.swift */; };
-		48429232222DACD5002B2C2C /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429231222DACD5002B2C2C /* ListTableViewController.swift */; };
 		48429234222DACF1002B2C2C /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429233222DACF1002B2C2C /* MapViewModel.swift */; };
 		48429237222DAD2E002B2C2C /* FurgoperfectosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429236222DAD2E002B2C2C /* FurgoperfectosRepository.swift */; };
 		48429239222DAD3F002B2C2C /* FurgoperfectoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48429238222DAD3F002B2C2C /* FurgoperfectoModel.swift */; };
 		4842923B222DBE12002B2C2C /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4842923A222DBE12002B2C2C /* APIEndpoints.swift */; };
 		4842923D222DBF0A002B2C2C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4842923C222DBF0A002B2C2C /* README.md */; };
 		4885F1B4236EE942003FF77D /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1B3236EE942003FF77D /* URLSessionExtensions.swift */; };
-		4885F1B7236EFA5C003FF77D /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1B6236EFA5C003FF77D /* ListTableViewCell.swift */; };
 		4885F1B9236F1464003FF77D /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1B8236F1464003FF77D /* MapViewDelegate.swift */; };
 		4885F1BB236F1488003FF77D /* MapViewCLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1BA236F1488003FF77D /* MapViewCLLocationManagerDelegate.swift */; };
 		48BD1A8922381CDA000AF785 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD1A8822381CDA000AF785 /* Extensions.swift */; };
@@ -69,18 +66,15 @@
 		48301CDF23F1DC9700B3867B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		48301CE123F1DCDB00B3867B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		48301CE723F1E89200B3867B /* MapViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerRepresentable.swift; sourceTree = "<group>"; };
-		48301CE923F1EB4300B3867B /* ListTableViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		48301CF123F205EB00B3867B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		4837C7EE224427010060F89D /* FurgoperfectoMapAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurgoperfectoMapAccessoryView.xib; sourceTree = "<group>"; };
 		4837C7F0224427170060F89D /* FurgoperfectoMapAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectoMapAccessoryView.swift; sourceTree = "<group>"; };
-		48429231222DACD5002B2C2C /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		48429233222DACF1002B2C2C /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		48429236222DAD2E002B2C2C /* FurgoperfectosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectosRepository.swift; sourceTree = "<group>"; };
 		48429238222DAD3F002B2C2C /* FurgoperfectoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectoModel.swift; sourceTree = "<group>"; };
 		4842923A222DBE12002B2C2C /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		4842923C222DBF0A002B2C2C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4885F1B3236EE942003FF77D /* URLSessionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
-		4885F1B6236EFA5C003FF77D /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		4885F1B8236F1464003FF77D /* MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDelegate.swift; sourceTree = "<group>"; };
 		4885F1BA236F1488003FF77D /* MapViewCLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCLLocationManagerDelegate.swift; sourceTree = "<group>"; };
 		48BD1A8822381CDA000AF785 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -147,11 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				48301CDF23F1DC9700B3867B /* MainView.swift */,
+				48CF531E222DA3F000C4F911 /* Main.storyboard */,
 				48301CF323F2061600B3867B /* New List View */,
 				48301CE323F1DEBE00B3867B /* UIComponents */,
-				48CF531E222DA3F000C4F911 /* Main.storyboard */,
 				48CF5349222DA4A900C4F911 /* MapView */,
-				48CF534A222DA4B300C4F911 /* ListView */,
 				4885F1C1236F42CE003FF77D /* DetailView Scene */,
 			);
 			path = "Presentation Layer";
@@ -221,14 +214,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		4885F1B5236EFA36003FF77D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4885F1B6236EFA5C003FF77D /* ListTableViewCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		4885F1BC236F19B8003FF77D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,22 +238,6 @@
 			children = (
 			);
 			path = "DetailView Scene";
-			sourceTree = "<group>";
-		};
-		48BD1A8B22382415000AF785 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		48BD1A8D2238245D000AF785 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				48429231222DACD5002B2C2C /* ListTableViewController.swift */,
-				48301CE923F1EB4300B3867B /* ListTableViewControllerRepresentable.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		48CF530E222DA3F000C4F911 = {
@@ -335,16 +304,6 @@
 				4842922D222DAC3A002B2C2C /* Controller */,
 			);
 			path = MapView;
-			sourceTree = "<group>";
-		};
-		48CF534A222DA4B300C4F911 /* ListView */ = {
-			isa = PBXGroup;
-			children = (
-				4885F1B5236EFA36003FF77D /* View */,
-				48BD1A8B22382415000AF785 /* ViewModel */,
-				48BD1A8D2238245D000AF785 /* Controller */,
-			);
-			path = ListView;
 			sourceTree = "<group>";
 		};
 		CEBFEE76D082FC8DE84AECDF /* Pods */ = {
@@ -594,9 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48301CE823F1E89200B3867B /* MapViewControllerRepresentable.swift in Sources */,
-				48429232222DACD5002B2C2C /* ListTableViewController.swift in Sources */,
 				48301CE023F1DC9700B3867B /* MainView.swift in Sources */,
-				48301CEA23F1EB4300B3867B /* ListTableViewControllerRepresentable.swift in Sources */,
 				4842923B222DBE12002B2C2C /* APIEndpoints.swift in Sources */,
 				4885F1B4236EE942003FF77D /* URLSessionExtensions.swift in Sources */,
 				4837C7F1224427170060F89D /* FurgoperfectoMapAccessoryView.swift in Sources */,
@@ -614,7 +571,6 @@
 				48301CE223F1DCDB00B3867B /* SceneDelegate.swift in Sources */,
 				48429234222DACF1002B2C2C /* MapViewModel.swift in Sources */,
 				48301CF223F205EB00B3867B /* ListView.swift in Sources */,
-				4885F1B7236EFA5C003FF77D /* ListTableViewCell.swift in Sources */,
 				4885F1BB236F1488003FF77D /* MapViewCLLocationManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

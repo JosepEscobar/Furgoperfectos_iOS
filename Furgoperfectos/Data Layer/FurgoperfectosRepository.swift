@@ -56,12 +56,6 @@ final class FurgoperfectosRepository {
     }
     
     func fetchData() {
-        guard arrayFurgoperfectos.isEmpty else {
-            WarqLog.debug("Data already loaded, loding from cache")
-            delegate?.provideFurgoperfectos(arrayFurgoperfectos)
-            return
-        }
-
         guard let url = URL(string: apiGetEverithingLight) else {
             delegate?.onError(GlobalError.castingError)
             return
