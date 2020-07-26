@@ -17,7 +17,7 @@ struct MainView: View {
                     Text("Mapa")
                 }
 
-            ListView(viewModel: ListViewModel())
+            FurgoperfectosListView(viewModel: ListViewModel())
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Lista")
