@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct FurgoperfectosListView: View {
-    @State var viewModel: ListViewModel
+    @State var viewModel: FurgoperfectoListViewModel
     
     var body: some View {
         NavigationView {
             List(viewModel.arrayFurgoperfectos) { itemViewModel in
-                NavigationLink(destination: FurgoperfectosDetailView(id: itemViewModel.id)) {
+                NavigationLink(destination: FurgoperfectosDetailView(state: itemViewModel)) {
                     VStack {
                         FurgoperfectoRowView(imageURL: itemViewModel.imageURL,
                                              name: itemViewModel.name,
@@ -29,6 +29,6 @@ struct FurgoperfectosListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        FurgoperfectosListView(viewModel: ListViewModel())
+        FurgoperfectosListView(viewModel: FurgoperfectoListViewModel())
     }
 }
