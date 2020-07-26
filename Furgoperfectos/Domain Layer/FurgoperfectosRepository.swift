@@ -10,14 +10,12 @@ import UIKit
 import warqLog
 
 protocol FurgoperfectosRepositoring: AnyObject {
-    func provideFurgoperfectos(_ furgoperfectosArray: [FurgoperfectoModel])
+    func provideFurgoperfectos(_ furgoperfectosArray: [FurgoperfectoDataModel])
     func onError(_ error: Error)
 }
 
 final class FurgoperfectosRepository {
-    #warning("TODO: @josepescobar, 25/07/2020, Remove shared instance and arrayFurgoperfectos and do it a permanent percistance")
-    static let shared: FurgoperfectosRepository = FurgoperfectosRepository()
-    var arrayFurgoperfectos: [FurgoperfectoModel] = []
+    #warning("TODO: @josepescobar, 25/07/2020, do it a permanent percistance")
     weak var delegate: FurgoperfectosRepositoring?
 
     init(delegate: FurgoperfectosRepositoring? = nil) {
@@ -38,7 +36,6 @@ final class FurgoperfectosRepository {
 
         let task = session.furgoperfectosResponseTask(with: url) { [weak self] furgoperfectosResponse, response, error in
             if let furgoperfectosResponse = furgoperfectosResponse {
-                self?.arrayFurgoperfectos = furgoperfectosResponse
                 DispatchQueue.main.async {
                     WarqLog.debug("Data loaded from server")
                     self?.delegate?.provideFurgoperfectos(furgoperfectosResponse)

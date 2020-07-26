@@ -39,7 +39,7 @@ extension URLSession {
         }
     }
 
-    func furgoperfectosResponseTask(with url: URL, completionHandler: @escaping ([FurgoperfectoModel]?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+    func furgoperfectosResponseTask(with url: URL, completionHandler: @escaping ([FurgoperfectoDataModel]?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         return self.codableTask(with: url, completionHandler: completionHandler)
     }
 }

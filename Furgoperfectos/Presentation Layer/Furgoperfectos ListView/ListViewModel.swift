@@ -6,10 +6,11 @@
 //  Copyright © 2019 Josep Escobar. All rights reserved.
 //
 
-import SwiftUI
 import Combine
+import Foundation
+import CoreLocation
 
-class FurgoperfectoListViewModel: NSObject, Identifiable {
+final class FurgoperfectoListViewModel: Identifiable {
     let id: String
     var name: String
     var descriptionItem: String
@@ -45,10 +46,14 @@ class ListViewModel: ObservableObject {
 extension ListViewModel: FurgoperfectosRepositoring {
     #warning("TODO: @josepescobar, 25/07/2020, Remove force unwrap on URL")
     #warning("TODO: @josepescobar, 25/07/2020, check id manage")
-    func provideFurgoperfectos(_ furgoperfectosArray: [FurgoperfectoModel]) {
-        arrayFurgoperfectos = furgoperfectosArray.map {
-            FurgoperfectoListViewModel(id: $0.id ?? "",
-                                       name: $0.nombre,
+    #warning("TODO: @josepescobar, 25/07/2020, do mapping in other layer")
+    func provideFurgoperfectos(_ furgoperfectosArray: [FurgoperfectoDataModel]) {
+        let furgoperfectosDomainModelArray = furgoperfectosArray.map {
+            FurgoperfectoModel(dataModel: $0)
+        }.compactMap { $0 }
+        arrayFurgoperfectos = furgoperfectosDomainModelArray.map {
+            FurgoperfectoListViewModel(id: $0.id,
+                                       name: $0.name,
                                        description: "",
                                        distance: "",
                                        imageURL: URL(string: $0.imagen ?? defaultImg) ?? URL(string: defaultImg)!)
@@ -56,5 +61,17 @@ extension ListViewModel: FurgoperfectosRepositoring {
     }
     
     func onError(_ error: Error) {
+    }
+}
+
+
+extension Array where Element == Place {
+
+    mutating func sort(by location: CLLocation) {
+         return sort(by: { $0.distance(to: location) < $1.distance(to: location) })
+    }
+
+    func sorted(by location: CLLocation) -> [Place] {
+        return sorted(by: { $0.distance(to: location) < $1.distance(to: location) })
     }
 }
