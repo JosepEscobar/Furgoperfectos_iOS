@@ -16,7 +16,7 @@ protocol MapViewModelStateProtocol: AnyObject {
 final class MapViewModel {
 
     private var annotationsArray: [FurgoperfectoAnnotation] = []
-    var arrayFurgoperfectos: [FurgoperfectoModel] = []
+    var arrayFurgoperfectos: [FurgoperfectoDataModel] = []
     weak var delegate: MapViewModelStateProtocol?
     var repository: FurgoperfectosRepository?
     
@@ -59,19 +59,11 @@ final class MapViewModel {
             }
         }
     }
-
-    private func gatherDataFromCoordiantes() {
-        for furgoperfecto in arrayFurgoperfectos {
-            furgoperfecto.getDataFromCoordinates()
-        }
-    }
-
 }
 
 extension MapViewModel: FurgoperfectosRepositoring {
-    func provideFurgoperfectos(_ furgoperfectosArray: [FurgoperfectoModel]) {
+    func provideFurgoperfectos(_ furgoperfectosArray: [FurgoperfectoDataModel]) {
         self.arrayFurgoperfectos = furgoperfectosArray
-        self.gatherDataFromCoordiantes()
         self.annotationsBuilder()
         self.delegate?.reloadData()
     }

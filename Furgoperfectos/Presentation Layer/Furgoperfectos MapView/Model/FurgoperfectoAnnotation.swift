@@ -22,7 +22,7 @@ final class FurgoperfectoAnnotation: NSObject, Decodable, MKAnnotation {
     private var longitude: CLLocationDegrees = 0
     public var title: String?
     public var id: Int?
-    public var furgoperfecto: FurgoperfectoModel?
+    public var furgoperfecto: FurgoperfectoDataModel?
 
     // This property must be key-value observable, which the `@objc dynamic` attributes provide.
     @objc dynamic var coordinate: CLLocationCoordinate2D {
