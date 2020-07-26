@@ -14,7 +14,7 @@ final class FurgoperfectoModel  {
     let name: String?
     let html: String?
     let htmlp: String?
-    let coordinates: Place?
+    let coordinates: Place
     let link: String?
     let imagen: String?
     let autor: String?
@@ -26,8 +26,9 @@ final class FurgoperfectoModel  {
     let body: String?
     
     init?(dataModel: FurgoperfectoDataModel) {
-        guard let latitude = dataModel.lat,
-            let longitude = dataModel.lng,
+        // the coordinates come inverted from backend
+        guard let latitude = dataModel.lng,
+            let longitude = dataModel.lat,
             let id = dataModel.id else { return nil }
         let place = Place(latitude: CLLocationDegrees(Double(latitude) ?? 0),
                           longitude: CLLocationDegrees(Double(longitude) ?? 0))

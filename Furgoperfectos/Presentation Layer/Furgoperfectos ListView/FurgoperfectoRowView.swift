@@ -28,7 +28,7 @@ struct FurgoperfectoRowView: View {
                 .frame(width: 150, height: 100)
             VStack(alignment: .leading) {
                 Text(name)
-                Text("A \(distance)km de tí")
+                Text(distance)
                     .foregroundColor(Color.gray)
             }
             
