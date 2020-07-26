@@ -12,6 +12,7 @@ struct FurgoperfectoRowView: View {
     let imageURL: URL
     let name: String
     let distance: String
+
     
     enum Constant {
         static let loadingMessage = "Cargando..."
@@ -21,10 +22,10 @@ struct FurgoperfectoRowView: View {
         HStack {
             AsyncImage(
                 url: imageURL,
-                placeholder: Text(Constant.loadingMessage)
-            ).aspectRatio(contentMode: .fit)
+                placeholder: Text("Cargando...")
+            )
+                .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 100)
-                .padding(.trailing)
             VStack(alignment: .leading) {
                 Text(name)
                 Text("A \(distance)km de tí")
