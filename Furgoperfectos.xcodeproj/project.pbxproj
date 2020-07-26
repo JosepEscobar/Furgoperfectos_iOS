@@ -30,7 +30,7 @@
 		48CF531D222DA3F000C4F911 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF531C222DA3F000C4F911 /* MapViewController.swift */; };
 		48CF5320222DA3F000C4F911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CF531E222DA3F000C4F911 /* Main.storyboard */; };
 		48CF5322222DA3F200C4F911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48CF5321222DA3F200C4F911 /* Assets.xcassets */; };
-		48CF5325222DA3F200C4F911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CF5323222DA3F200C4F911 /* LaunchScreen.storyboard */; };
+		48CF5325222DA3F200C4F911 /* LaunchScreenV2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CF5323222DA3F200C4F911 /* LaunchScreenV2.storyboard */; };
 		48CF5330222DA3F200C4F911 /* FurgoperfectosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF532F222DA3F200C4F911 /* FurgoperfectosTests.swift */; };
 		48CF533B222DA3F200C4F911 /* FurgoperfectosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF533A222DA3F200C4F911 /* FurgoperfectosUITests.swift */; };
 		48EB358B24CCA1FB008B1648 /* DataErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB358A24CCA1FB008B1648 /* DataErrors.swift */; };
@@ -88,7 +88,7 @@
 		48CF531C222DA3F000C4F911 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		48CF531F222DA3F000C4F911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48CF5321222DA3F200C4F911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		48CF5324222DA3F200C4F911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48CF5324222DA3F200C4F911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreenV2.storyboard; sourceTree = "<group>"; };
 		48CF5326222DA3F200C4F911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48CF532B222DA3F200C4F911 /* FurgoperfectosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FurgoperfectosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CF532F222DA3F200C4F911 /* FurgoperfectosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectosTests.swift; sourceTree = "<group>"; };
@@ -236,7 +236,7 @@
 		4885F1BD236F19CD003FF77D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				48CF5323222DA3F200C4F911 /* LaunchScreen.storyboard */,
+				48CF5323222DA3F200C4F911 /* LaunchScreenV2.storyboard */,
 				48CF5321222DA3F200C4F911 /* Assets.xcassets */,
 				48CF5326222DA3F200C4F911 /* Info.plist */,
 			);
@@ -457,7 +457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48CF5325222DA3F200C4F911 /* LaunchScreen.storyboard in Resources */,
+				48CF5325222DA3F200C4F911 /* LaunchScreenV2.storyboard in Resources */,
 				48CF5322222DA3F200C4F911 /* Assets.xcassets in Resources */,
 				4842923D222DBF0A002B2C2C /* README.md in Resources */,
 				48CF5320222DA3F000C4F911 /* Main.storyboard in Resources */,
@@ -639,12 +639,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		48CF5323222DA3F200C4F911 /* LaunchScreen.storyboard */ = {
+		48CF5323222DA3F200C4F911 /* LaunchScreenV2.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				48CF5324222DA3F200C4F911 /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = LaunchScreenV2.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
