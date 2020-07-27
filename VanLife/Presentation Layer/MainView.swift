@@ -22,7 +22,8 @@ struct MainView: View {
                     Image(systemName: "list.bullet")
                     Text("Lista")
                 }
-        }
+            
+        }.edgesIgnoringSafeArea(.top)
     }
 }
 
