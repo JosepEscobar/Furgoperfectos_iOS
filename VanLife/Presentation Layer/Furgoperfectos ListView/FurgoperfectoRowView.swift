@@ -31,7 +31,6 @@ struct FurgoperfectoRowView: View {
                 Text(distance)
                     .foregroundColor(Color.gray)
             }
-            
         }
     }
 }

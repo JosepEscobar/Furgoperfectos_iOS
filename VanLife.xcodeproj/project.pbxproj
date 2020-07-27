@@ -28,6 +28,8 @@
 		4885F1BB236F1488003FF77D /* MapViewCLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885F1BA236F1488003FF77D /* MapViewCLLocationManagerDelegate.swift */; };
 		4894764B24CDB6C9007FB611 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894764A24CDB6C9007FB611 /* ArrayExtensions.swift */; };
 		4894764D24CDB9D3007FB611 /* FurgoperfectoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894764C24CDB9D3007FB611 /* FurgoperfectoViewModel.swift */; };
+		48B7C7F524CF255F00C1AF43 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7C7F424CF255F00C1AF43 /* UIViewControllerExtensions.swift */; };
+		48B7C7F724CF257A00C1AF43 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7C7F624CF257A00C1AF43 /* UIAlertControllerExtensions.swift */; };
 		48BD1A8922381CDA000AF785 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD1A8822381CDA000AF785 /* Extensions.swift */; };
 		48BD1A8F2238248C000AF785 /* FurgoperfectoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD1A8E2238248C000AF785 /* FurgoperfectoListViewModel.swift */; };
 		48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF531A222DA3F000C4F911 /* AppDelegate.swift */; };
@@ -90,6 +92,8 @@
 		4885F1BA236F1488003FF77D /* MapViewCLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCLLocationManagerDelegate.swift; sourceTree = "<group>"; };
 		4894764A24CDB6C9007FB611 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		4894764C24CDB9D3007FB611 /* FurgoperfectoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectoViewModel.swift; sourceTree = "<group>"; };
+		48B7C7F424CF255F00C1AF43 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		48B7C7F624CF257A00C1AF43 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
 		48BD1A8822381CDA000AF785 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		48BD1A8E2238248C000AF785 /* FurgoperfectoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectoListViewModel.swift; sourceTree = "<group>"; };
 		48CF5317222DA3F000C4F911 /* VanLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VanLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +251,8 @@
 				48BD1A8822381CDA000AF785 /* Extensions.swift */,
 				4885F1B3236EE942003FF77D /* URLSessionExtensions.swift */,
 				4894764A24CDB6C9007FB611 /* ArrayExtensions.swift */,
+				48B7C7F424CF255F00C1AF43 /* UIViewControllerExtensions.swift */,
+				48B7C7F624CF257A00C1AF43 /* UIAlertControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -610,6 +616,7 @@
 				48EB359824CD6160008B1648 /* FurgoperfectoRowView.swift in Sources */,
 				48BD1A8922381CDA000AF785 /* Extensions.swift in Sources */,
 				48009C492242E7F30086DE35 /* FurgoperfectoAnnotation.swift in Sources */,
+				48B7C7F524CF255F00C1AF43 /* UIViewControllerExtensions.swift in Sources */,
 				48429237222DAD2E002B2C2C /* FurgoperfectosRepository.swift in Sources */,
 				48EB358B24CCA1FB008B1648 /* DataErrors.swift in Sources */,
 				48BD1A8F2238248C000AF785 /* FurgoperfectoListViewModel.swift in Sources */,
@@ -617,6 +624,7 @@
 				48CF531B222DA3F000C4F911 /* AppDelegate.swift in Sources */,
 				48078EF524CEA525003F410C /* FurgoparfectoModel.swift in Sources */,
 				48EB359024CCAB7F008B1648 /* AsyncImage.swift in Sources */,
+				48B7C7F724CF257A00C1AF43 /* UIAlertControllerExtensions.swift in Sources */,
 				48429239222DAD3F002B2C2C /* FurgoperfectoDataModel.swift in Sources */,
 				48301CE223F1DCDB00B3867B /* SceneDelegate.swift in Sources */,
 				48429234222DACF1002B2C2C /* MapViewModel.swift in Sources */,

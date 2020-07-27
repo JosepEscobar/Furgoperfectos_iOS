@@ -46,12 +46,15 @@ extension MapViewController: MKMapViewDelegate {
                                              options: nil)?.first as? FurgoperfectoMapAccessoryView {
 
             let url = URL(string: annotation.furgoperfecto!.imagen ?? "")
+            let forumURL = URL(string: "https://www.furgovw.org/foro/index.php?topic=\(annotation.furgoperfecto!.topicID ?? "0")")!
             let processor = DownsamplingImageProcessor(size: accessoryView.imageView.bounds.size)
             let viewModel = FurgoperfectoViewModel(id: (annotation.furgoperfecto?.id)!,
                                                    name: (annotation.furgoperfecto?.nombre)!,
                                                    description: "",
                                                    distance: "",
-                                                   imageURL: url!)
+                                                   imageURL: url!,
+                                                   forumURL: forumURL,
+                                                   coordinates: CLLocation(latitude: annotation.coordinate.longitude, longitude: annotation.coordinate.latitude))
             accessoryView.delegate = self
             accessoryView.imageView.kf.indicatorType = .activity
             

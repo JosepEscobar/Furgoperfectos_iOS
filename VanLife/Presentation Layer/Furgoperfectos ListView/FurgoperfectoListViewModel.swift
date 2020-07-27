@@ -52,16 +52,21 @@ extension FurgoperfectoListViewModel: FurgoperfectosRepositoring {
                 FurgoperfectoModel(dataModel: $0)}
             .compactMap { $0 }
         
+        
+        
         if let coordinates = userCoordinates {
             furgoperfectosDomainModelArray = furgoperfectosDomainModelArray.sorted(by: coordinates)
         }
         
         arrayFurgoperfectos = furgoperfectosDomainModelArray.map {
-            FurgoperfectoViewModel(id: $0.id,
-                                       name: $0.name,
-                                       description: "",
-                                       distance: calculateDistance(userCoordinates, location: $0.coordinates.location),
-                                       imageURL: URL(string: $0.imagen ?? defaultImg) ?? URL(string: defaultImg)!)
+            let forumURL = URL(string: "https://www.furgovw.org/foro/index.php?topic=\($0.topicID ?? "0")")!
+            return FurgoperfectoViewModel(id: $0.id,
+                                          name: $0.name,
+                                          description: "",
+                                          distance: calculateDistance(userCoordinates, location: $0.coordinates.location),
+                                          imageURL: URL(string: $0.imagen ?? defaultImg) ?? URL(string: defaultImg)!,
+                                          forumURL: forumURL,
+                                          coordinates: $0.coordinates.location)
         }
     }
     
