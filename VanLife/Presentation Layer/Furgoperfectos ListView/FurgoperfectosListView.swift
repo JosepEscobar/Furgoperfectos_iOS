@@ -11,6 +11,10 @@ import SwiftUI
 struct FurgoperfectosListView: View {
     @State var viewModel: FurgoperfectoListViewModel
     
+    enum Constant {
+        static let title = "Furgoperfectos 🚐"
+    }
+    
     var body: some View {
         NavigationView {
             List(viewModel.arrayFurgoperfectos) { itemViewModel in
@@ -20,8 +24,7 @@ struct FurgoperfectosListView: View {
                                          distance: itemViewModel.distance)
                 }
             }
-                
-            .navigationBarTitle("Furgoperfectos 🚐")
+            .navigationBarTitle(Constant.title)
         }
     }
 }

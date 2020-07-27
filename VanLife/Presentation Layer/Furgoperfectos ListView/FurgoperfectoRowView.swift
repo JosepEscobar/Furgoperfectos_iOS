@@ -22,7 +22,7 @@ struct FurgoperfectoRowView: View {
         HStack {
             AsyncImage(
                 url: imageURL,
-                placeholder: Text("Cargando...")
+                placeholder: Text(Constant.loadingMessage)
             )
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 100)
