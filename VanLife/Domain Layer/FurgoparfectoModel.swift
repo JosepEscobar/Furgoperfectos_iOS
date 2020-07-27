@@ -26,8 +26,8 @@ final class FurgoperfectoModel  {
     let body: String?
     
     init?(dataModel: FurgoperfectoDataModel) {
-        guard let latitude = dataModel.lat,
-            let longitude = dataModel.lng,
+        guard let latitude = dataModel.lng,
+            let longitude = dataModel.lat,
             let id = dataModel.id else { return nil }
         let place = Place(latitude: CLLocationDegrees(Double(latitude) ?? 0),
                           longitude: CLLocationDegrees(Double(longitude) ?? 0))

@@ -15,13 +15,12 @@ struct FurgoperfectosListView: View {
         NavigationView {
             List(viewModel.arrayFurgoperfectos) { itemViewModel in
                 NavigationLink(destination: FurgoperfectosDetailView(state: itemViewModel)) {
-                    VStack {
-                        FurgoperfectoRowView(imageURL: itemViewModel.imageURL,
-                                             name: itemViewModel.name,
-                                             distance: itemViewModel.distance)
-                    }
+                    FurgoperfectoRowView(imageURL: itemViewModel.imageURL,
+                                         name: itemViewModel.name,
+                                         distance: itemViewModel.distance)
                 }
             }
+                
             .navigationBarTitle("Furgoperfectos 🚐")
         }
     }

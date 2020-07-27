@@ -846,7 +846,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DQZ7G5MLVC;
-				INFOPLIST_FILE = FurgoperfectosTests/Info.plist;
+				INFOPLIST_FILE = VanLifeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -868,7 +868,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DQZ7G5MLVC;
-				INFOPLIST_FILE = FurgoperfectosTests/Info.plist;
+				INFOPLIST_FILE = VanLifeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -889,7 +889,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DQZ7G5MLVC;
-				INFOPLIST_FILE = FurgoperfectosUITests/Info.plist;
+				INFOPLIST_FILE = VanLifeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -910,7 +910,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DQZ7G5MLVC;
-				INFOPLIST_FILE = FurgoperfectosUITests/Info.plist;
+				INFOPLIST_FILE = VanLifeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

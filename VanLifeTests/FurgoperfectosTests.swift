@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Furgoperfectos
+@testable import VanLife
 
 final class FurgoperfectosTests: XCTestCase {
 

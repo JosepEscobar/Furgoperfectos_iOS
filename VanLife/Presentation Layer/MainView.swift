@@ -15,7 +15,7 @@ struct MainView: View {
                 .tabItem {
                     Image(systemName: "map")
                     Text("Mapa")
-                }
+                }.edgesIgnoringSafeArea(.top)
 
             FurgoperfectosListView(viewModel: FurgoperfectoListViewModel())
                 .tabItem {
