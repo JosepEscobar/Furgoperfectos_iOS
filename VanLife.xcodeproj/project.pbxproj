@@ -42,9 +42,9 @@
 		48EB359824CD6160008B1648 /* FurgoperfectoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB359724CD6160008B1648 /* FurgoperfectoRowView.swift */; };
 		48ECC5C924CD9C2F00E4477B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ECC5C824CD9C2F00E4477B /* Place.swift */; };
 		48ECC5CB24CD9CC500E4477B /* FurgoperfectoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ECC5CA24CD9CC500E4477B /* FurgoperfectoModel.swift */; };
-		8E2201F11CD614DE12477E25 /* Pods_Furgoperfectos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D98C91ACC8B420FF2C948A /* Pods_Furgoperfectos.framework */; };
-		B09C47FDEDDF978D2F009E7C /* Pods_FurgoperfectosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC624CB25992E15562FDB6D /* Pods_FurgoperfectosUITests.framework */; };
-		E171B03D6532236DC6D59ECE /* Pods_FurgoperfectosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332E3991FE8ECE768317382A /* Pods_FurgoperfectosTests.framework */; };
+		BC82EA95651AD82D7A7BA7FD /* Pods_VanLifeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433BE1F34B8BF93D37EF2DDF /* Pods_VanLifeTests.framework */; };
+		D71ED13A05B98E29F0C35B28 /* Pods_VanLifeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8785D9E820581CA5B027DB90 /* Pods_VanLifeUITests.framework */; };
+		F52CCDB685195D4A8A5DF911 /* Pods_VanLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197BCCA1D079B3E7D71954CF /* Pods_VanLife.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03D98C91ACC8B420FF2C948A /* Pods_Furgoperfectos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Furgoperfectos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EC624CB25992E15562FDB6D /* Pods_FurgoperfectosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurgoperfectosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		332E3991FE8ECE768317382A /* Pods_FurgoperfectosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurgoperfectosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		197BCCA1D079B3E7D71954CF /* Pods_VanLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VanLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26B4F1911FD1D05E06909DF0 /* Pods-VanLifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VanLifeTests.release.xcconfig"; path = "Target Support Files/Pods-VanLifeTests/Pods-VanLifeTests.release.xcconfig"; sourceTree = "<group>"; };
+		423E2C370C6A202B3C4403F8 /* Pods-VanLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VanLife.debug.xcconfig"; path = "Target Support Files/Pods-VanLife/Pods-VanLife.debug.xcconfig"; sourceTree = "<group>"; };
+		433BE1F34B8BF93D37EF2DDF /* Pods_VanLifeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VanLifeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48009C462242E79D0086DE35 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 		48009C482242E7F30086DE35 /* FurgoperfectoAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectoAnnotation.swift; sourceTree = "<group>"; };
 		48009C4A2242E8940086DE35 /* FurgoperfectosAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurgoperfectosAnnotationView.swift; sourceTree = "<group>"; };
@@ -89,17 +90,17 @@
 		4894764C24CDB9D3007FB611 /* FurgoperfectoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectoViewModel.swift; sourceTree = "<group>"; };
 		48BD1A8822381CDA000AF785 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		48BD1A8E2238248C000AF785 /* FurgoperfectoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectoListViewModel.swift; sourceTree = "<group>"; };
-		48CF5317222DA3F000C4F911 /* Furgoperfectos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furgoperfectos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48CF5317222DA3F000C4F911 /* VanLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VanLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CF531A222DA3F000C4F911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48CF531C222DA3F000C4F911 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		48CF531F222DA3F000C4F911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48CF5321222DA3F200C4F911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48CF5324222DA3F200C4F911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreenV2.storyboard; sourceTree = "<group>"; };
 		48CF5326222DA3F200C4F911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48CF532B222DA3F200C4F911 /* FurgoperfectosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FurgoperfectosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48CF532B222DA3F200C4F911 /* VanLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VanLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CF532F222DA3F200C4F911 /* FurgoperfectosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectosTests.swift; sourceTree = "<group>"; };
 		48CF5331222DA3F200C4F911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48CF5336222DA3F200C4F911 /* FurgoperfectosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FurgoperfectosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48CF5336222DA3F200C4F911 /* VanLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VanLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CF533A222DA3F200C4F911 /* FurgoperfectosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurgoperfectosUITests.swift; sourceTree = "<group>"; };
 		48CF533C222DA3F200C4F911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48EB358A24CCA1FB008B1648 /* DataErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataErrors.swift; sourceTree = "<group>"; };
@@ -111,10 +112,15 @@
 		48ECC5CA24CD9CC500E4477B /* FurgoperfectoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FurgoperfectoModel.swift; path = "Furgoperfectos/Presentation Layer/Furgoperfectos ListView/FurgoperfectoModel.swift"; sourceTree = SOURCE_ROOT; };
 		4FDBD3D9007C63628CD0B37C /* Pods-Furgoperfectos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Furgoperfectos.debug.xcconfig"; path = "Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos.debug.xcconfig"; sourceTree = "<group>"; };
 		61ACBD92EC4BC09E1C5B1DCC /* Pods-FurgoperfectosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurgoperfectosUITests.release.xcconfig"; path = "Target Support Files/Pods-FurgoperfectosUITests/Pods-FurgoperfectosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6D9A1CA5E7DEAA04327DBFA8 /* Pods-VanLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VanLife.release.xcconfig"; path = "Target Support Files/Pods-VanLife/Pods-VanLife.release.xcconfig"; sourceTree = "<group>"; };
+		8785D9E820581CA5B027DB90 /* Pods_VanLifeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VanLifeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		887EE5F019E63995012D1777 /* Pods-VanLifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VanLifeTests.debug.xcconfig"; path = "Target Support Files/Pods-VanLifeTests/Pods-VanLifeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D06E6B50F95F956C69137AE /* Pods-Furgoperfectos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Furgoperfectos.release.xcconfig"; path = "Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos.release.xcconfig"; sourceTree = "<group>"; };
 		94A6A07D6799E9AA29378D42 /* Pods-FurgoperfectosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurgoperfectosUITests.debug.xcconfig"; path = "Target Support Files/Pods-FurgoperfectosUITests/Pods-FurgoperfectosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		99B23FE0F3F8B57B4FDEA61B /* Pods-VanLifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VanLifeUITests.debug.xcconfig"; path = "Target Support Files/Pods-VanLifeUITests/Pods-VanLifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1CBC70DCB630850D05BE956 /* Pods-FurgoperfectosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurgoperfectosTests.release.xcconfig"; path = "Target Support Files/Pods-FurgoperfectosTests/Pods-FurgoperfectosTests.release.xcconfig"; sourceTree = "<group>"; };
 		E08724FC34810B8366F4042D /* Pods-FurgoperfectosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurgoperfectosTests.debug.xcconfig"; path = "Target Support Files/Pods-FurgoperfectosTests/Pods-FurgoperfectosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB8428F68ED2F4818470B851 /* Pods-VanLifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VanLifeUITests.release.xcconfig"; path = "Target Support Files/Pods-VanLifeUITests/Pods-VanLifeUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E2201F11CD614DE12477E25 /* Pods_Furgoperfectos.framework in Frameworks */,
+				F52CCDB685195D4A8A5DF911 /* Pods_VanLife.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E171B03D6532236DC6D59ECE /* Pods_FurgoperfectosTests.framework in Frameworks */,
+				BC82EA95651AD82D7A7BA7FD /* Pods_VanLifeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B09C47FDEDDF978D2F009E7C /* Pods_FurgoperfectosUITests.framework in Frameworks */,
+				D71ED13A05B98E29F0C35B28 /* Pods_VanLifeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,9 +273,9 @@
 			isa = PBXGroup;
 			children = (
 				4842923C222DBF0A002B2C2C /* README.md */,
-				48CF5319222DA3F000C4F911 /* Furgoperfectos */,
-				48CF532E222DA3F200C4F911 /* FurgoperfectosTests */,
-				48CF5339222DA3F200C4F911 /* FurgoperfectosUITests */,
+				48CF5319222DA3F000C4F911 /* VanLife */,
+				48CF532E222DA3F200C4F911 /* VanLifeTests */,
+				48CF5339222DA3F200C4F911 /* VanLifeUITests */,
 				48CF5318222DA3F000C4F911 /* Products */,
 				CEBFEE76D082FC8DE84AECDF /* Pods */,
 				FA30673C5385D9FD80E1905F /* Frameworks */,
@@ -279,14 +285,14 @@
 		48CF5318222DA3F000C4F911 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				48CF5317222DA3F000C4F911 /* Furgoperfectos.app */,
-				48CF532B222DA3F200C4F911 /* FurgoperfectosTests.xctest */,
-				48CF5336222DA3F200C4F911 /* FurgoperfectosUITests.xctest */,
+				48CF5317222DA3F000C4F911 /* VanLife.app */,
+				48CF532B222DA3F200C4F911 /* VanLifeTests.xctest */,
+				48CF5336222DA3F200C4F911 /* VanLifeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		48CF5319222DA3F000C4F911 /* Furgoperfectos */ = {
+		48CF5319222DA3F000C4F911 /* VanLife */ = {
 			isa = PBXGroup;
 			children = (
 				48301CDC23F1DB5E00B3867B /* Presentation Layer */,
@@ -297,25 +303,25 @@
 				48CF531A222DA3F000C4F911 /* AppDelegate.swift */,
 				48301CE123F1DCDB00B3867B /* SceneDelegate.swift */,
 			);
-			path = Furgoperfectos;
+			path = VanLife;
 			sourceTree = "<group>";
 		};
-		48CF532E222DA3F200C4F911 /* FurgoperfectosTests */ = {
+		48CF532E222DA3F200C4F911 /* VanLifeTests */ = {
 			isa = PBXGroup;
 			children = (
 				48CF532F222DA3F200C4F911 /* FurgoperfectosTests.swift */,
 				48CF5331222DA3F200C4F911 /* Info.plist */,
 			);
-			path = FurgoperfectosTests;
+			path = VanLifeTests;
 			sourceTree = "<group>";
 		};
-		48CF5339222DA3F200C4F911 /* FurgoperfectosUITests */ = {
+		48CF5339222DA3F200C4F911 /* VanLifeUITests */ = {
 			isa = PBXGroup;
 			children = (
 				48CF533A222DA3F200C4F911 /* FurgoperfectosUITests.swift */,
 				48CF533C222DA3F200C4F911 /* Info.plist */,
 			);
-			path = FurgoperfectosUITests;
+			path = VanLifeUITests;
 			sourceTree = "<group>";
 		};
 		48CF5349222DA4A900C4F911 /* Furgoperfectos MapView */ = {
@@ -347,6 +353,12 @@
 				C1CBC70DCB630850D05BE956 /* Pods-FurgoperfectosTests.release.xcconfig */,
 				94A6A07D6799E9AA29378D42 /* Pods-FurgoperfectosUITests.debug.xcconfig */,
 				61ACBD92EC4BC09E1C5B1DCC /* Pods-FurgoperfectosUITests.release.xcconfig */,
+				423E2C370C6A202B3C4403F8 /* Pods-VanLife.debug.xcconfig */,
+				6D9A1CA5E7DEAA04327DBFA8 /* Pods-VanLife.release.xcconfig */,
+				887EE5F019E63995012D1777 /* Pods-VanLifeTests.debug.xcconfig */,
+				26B4F1911FD1D05E06909DF0 /* Pods-VanLifeTests.release.xcconfig */,
+				99B23FE0F3F8B57B4FDEA61B /* Pods-VanLifeUITests.debug.xcconfig */,
+				FB8428F68ED2F4818470B851 /* Pods-VanLifeUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -354,9 +366,9 @@
 		FA30673C5385D9FD80E1905F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				03D98C91ACC8B420FF2C948A /* Pods_Furgoperfectos.framework */,
-				332E3991FE8ECE768317382A /* Pods_FurgoperfectosTests.framework */,
-				2EC624CB25992E15562FDB6D /* Pods_FurgoperfectosUITests.framework */,
+				197BCCA1D079B3E7D71954CF /* Pods_VanLife.framework */,
+				433BE1F34B8BF93D37EF2DDF /* Pods_VanLifeTests.framework */,
+				8785D9E820581CA5B027DB90 /* Pods_VanLifeUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -364,9 +376,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		48CF5316222DA3F000C4F911 /* Furgoperfectos */ = {
+		48CF5316222DA3F000C4F911 /* VanLife */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48CF533F222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "Furgoperfectos" */;
+			buildConfigurationList = 48CF533F222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "VanLife" */;
 			buildPhases = (
 				FF6CF8D3C8E1AF56F3A989EF /* [CP] Check Pods Manifest.lock */,
 				48CF5313222DA3F000C4F911 /* Sources */,
@@ -378,14 +390,14 @@
 			);
 			dependencies = (
 			);
-			name = Furgoperfectos;
+			name = VanLife;
 			productName = Furgoperfectos;
-			productReference = 48CF5317222DA3F000C4F911 /* Furgoperfectos.app */;
+			productReference = 48CF5317222DA3F000C4F911 /* VanLife.app */;
 			productType = "com.apple.product-type.application";
 		};
-		48CF532A222DA3F200C4F911 /* FurgoperfectosTests */ = {
+		48CF532A222DA3F200C4F911 /* VanLifeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48CF5342222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "FurgoperfectosTests" */;
+			buildConfigurationList = 48CF5342222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "VanLifeTests" */;
 			buildPhases = (
 				DE17519275B32B29B6A8EAF1 /* [CP] Check Pods Manifest.lock */,
 				48CF5327222DA3F200C4F911 /* Sources */,
@@ -397,14 +409,14 @@
 			dependencies = (
 				48CF532D222DA3F200C4F911 /* PBXTargetDependency */,
 			);
-			name = FurgoperfectosTests;
+			name = VanLifeTests;
 			productName = FurgoperfectosTests;
-			productReference = 48CF532B222DA3F200C4F911 /* FurgoperfectosTests.xctest */;
+			productReference = 48CF532B222DA3F200C4F911 /* VanLifeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		48CF5335222DA3F200C4F911 /* FurgoperfectosUITests */ = {
+		48CF5335222DA3F200C4F911 /* VanLifeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48CF5345222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "FurgoperfectosUITests" */;
+			buildConfigurationList = 48CF5345222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "VanLifeUITests" */;
 			buildPhases = (
 				B3DF7CA1D2017E765C07819A /* [CP] Check Pods Manifest.lock */,
 				48CF5332222DA3F200C4F911 /* Sources */,
@@ -416,9 +428,9 @@
 			dependencies = (
 				48CF5338222DA3F200C4F911 /* PBXTargetDependency */,
 			);
-			name = FurgoperfectosUITests;
+			name = VanLifeUITests;
 			productName = FurgoperfectosUITests;
-			productReference = 48CF5336222DA3F200C4F911 /* FurgoperfectosUITests.xctest */;
+			productReference = 48CF5336222DA3F200C4F911 /* VanLifeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -444,7 +456,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 48CF5312222DA3F000C4F911 /* Build configuration list for PBXProject "Furgoperfectos" */;
+			buildConfigurationList = 48CF5312222DA3F000C4F911 /* Build configuration list for PBXProject "VanLife" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -457,9 +469,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				48CF5316222DA3F000C4F911 /* Furgoperfectos */,
-				48CF532A222DA3F200C4F911 /* FurgoperfectosTests */,
-				48CF5335222DA3F200C4F911 /* FurgoperfectosUITests */,
+				48CF5316222DA3F000C4F911 /* VanLife */,
+				48CF532A222DA3F200C4F911 /* VanLifeTests */,
+				48CF5335222DA3F200C4F911 /* VanLifeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -500,15 +512,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VanLife/Pods-VanLife-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VanLife/Pods-VanLife-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Furgoperfectos/Pods-Furgoperfectos-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VanLife/Pods-VanLife-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B3DF7CA1D2017E765C07819A /* [CP] Check Pods Manifest.lock */ = {
@@ -526,7 +538,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FurgoperfectosUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-VanLifeUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -548,7 +560,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FurgoperfectosTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-VanLifeTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -570,7 +582,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Furgoperfectos-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-VanLife-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -636,12 +648,12 @@
 /* Begin PBXTargetDependency section */
 		48CF532D222DA3F200C4F911 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 48CF5316222DA3F000C4F911 /* Furgoperfectos */;
+			target = 48CF5316222DA3F000C4F911 /* VanLife */;
 			targetProxy = 48CF532C222DA3F200C4F911 /* PBXContainerItemProxy */;
 		};
 		48CF5338222DA3F200C4F911 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 48CF5316222DA3F000C4F911 /* Furgoperfectos */;
+			target = 48CF5316222DA3F000C4F911 /* VanLife */;
 			targetProxy = 48CF5337222DA3F200C4F911 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -784,7 +796,7 @@
 		};
 		48CF5340222DA3F200C4F911 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FDBD3D9007C63628CD0B37C /* Pods-Furgoperfectos.debug.xcconfig */;
+			baseConfigurationReference = 423E2C370C6A202B3C4403F8 /* Pods-VanLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -806,7 +818,7 @@
 		};
 		48CF5341222DA3F200C4F911 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D06E6B50F95F956C69137AE /* Pods-Furgoperfectos.release.xcconfig */;
+			baseConfigurationReference = 6D9A1CA5E7DEAA04327DBFA8 /* Pods-VanLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -828,7 +840,7 @@
 		};
 		48CF5343222DA3F200C4F911 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E08724FC34810B8366F4042D /* Pods-FurgoperfectosTests.debug.xcconfig */;
+			baseConfigurationReference = 887EE5F019E63995012D1777 /* Pods-VanLifeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -844,13 +856,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Furgoperfectos.app/Furgoperfectos";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VanLife.app/VanLife";
 			};
 			name = Debug;
 		};
 		48CF5344222DA3F200C4F911 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1CBC70DCB630850D05BE956 /* Pods-FurgoperfectosTests.release.xcconfig */;
+			baseConfigurationReference = 26B4F1911FD1D05E06909DF0 /* Pods-VanLifeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -866,13 +878,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Furgoperfectos.app/Furgoperfectos";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VanLife.app/VanLife";
 			};
 			name = Release;
 		};
 		48CF5346222DA3F200C4F911 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94A6A07D6799E9AA29378D42 /* Pods-FurgoperfectosUITests.debug.xcconfig */;
+			baseConfigurationReference = 99B23FE0F3F8B57B4FDEA61B /* Pods-VanLifeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -893,7 +905,7 @@
 		};
 		48CF5347222DA3F200C4F911 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61ACBD92EC4BC09E1C5B1DCC /* Pods-FurgoperfectosUITests.release.xcconfig */;
+			baseConfigurationReference = FB8428F68ED2F4818470B851 /* Pods-VanLifeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -915,7 +927,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		48CF5312222DA3F000C4F911 /* Build configuration list for PBXProject "Furgoperfectos" */ = {
+		48CF5312222DA3F000C4F911 /* Build configuration list for PBXProject "VanLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48CF533D222DA3F200C4F911 /* Debug */,
@@ -924,7 +936,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		48CF533F222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "Furgoperfectos" */ = {
+		48CF533F222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "VanLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48CF5340222DA3F200C4F911 /* Debug */,
@@ -933,7 +945,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		48CF5342222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "FurgoperfectosTests" */ = {
+		48CF5342222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "VanLifeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48CF5343222DA3F200C4F911 /* Debug */,
@@ -942,7 +954,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		48CF5345222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "FurgoperfectosUITests" */ = {
+		48CF5345222DA3F200C4F911 /* Build configuration list for PBXNativeTarget "VanLifeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48CF5346222DA3F200C4F911 /* Debug */,

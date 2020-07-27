@@ -1,7 +1,7 @@
 PODS:
-  - Kingfisher (5.10.1):
-    - Kingfisher/Core (= 5.10.1)
-  - Kingfisher/Core (5.10.1)
+  - Kingfisher (5.14.1):
+    - Kingfisher/Core (= 5.14.1)
+  - Kingfisher/Core (5.14.1)
   - PKHUD (5.3.0)
   - warqLog (0.0.2)
 
@@ -18,10 +18,10 @@ SPEC REPOS:
     - warqLog
 
 SPEC CHECKSUMS:
-  Kingfisher: eb36b7dfcc78d60877051c92c119a2865972961a
+  Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   warqLog: 5b06cbf1fda0e81d1f07bb9f401fb6b49511faca
 
-PODFILE CHECKSUM: 697d2b2ac0f33dc19b8f7fee1ace76a05d1128fd
+PODFILE CHECKSUM: b715f098ef54ac33a396434a666af2db2a79a288
 
 COCOAPODS: 1.9.1

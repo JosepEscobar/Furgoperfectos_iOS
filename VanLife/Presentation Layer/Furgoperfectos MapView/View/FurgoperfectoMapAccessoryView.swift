@@ -8,14 +8,26 @@
 
 import UIKit
 
+protocol FurgoperfectoMapAccessoryViewDelegate {
+    func moreInfoButtonPushed(state: FurgoperfectoViewModel)
+}
+
 final class FurgoperfectoMapAccessoryView: UIView {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var servicesLabel: UILabel!
     @IBOutlet weak var servicesSatckView: UIStackView!
     @IBOutlet weak var moreInfoButon: UIButton!
+    var delegate: FurgoperfectoMapAccessoryViewDelegate?
+    var viewModel: FurgoperfectoViewModel? = nil
+    
+    func apply(state: FurgoperfectoViewModel){
+        self.viewModel = state
+    }
 
     @IBAction func moreInfoButtonPushed(_ sender: Any) {
+        guard let viewModel = viewModel else { return }
+        delegate?.moreInfoButtonPushed(state: viewModel)
     }
 
     /*

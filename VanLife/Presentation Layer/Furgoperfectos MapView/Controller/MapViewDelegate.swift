@@ -10,6 +10,7 @@ import Foundation
 import MapKit
 import Kingfisher
 import warqLog
+import SwiftUI
 
 extension MapViewController: MKMapViewDelegate {
 
@@ -37,17 +38,25 @@ extension MapViewController: MKMapViewDelegate {
 
     }
 
+    #warning("TODO: @josepescobar, 26/06/2020, remove focre unwrap")
     func getCalloutAccessoryView(annotation: FurgoperfectoAnnotation) -> FurgoperfectoMapAccessoryView? {
         let bundle = Bundle.main
-        if let nibView = bundle.loadNibNamed("FurgoperfectoMapAccessoryView",
+        if let accessoryView = bundle.loadNibNamed("FurgoperfectoMapAccessoryView",
                                              owner: self,
                                              options: nil)?.first as? FurgoperfectoMapAccessoryView {
 
             let url = URL(string: annotation.furgoperfecto!.imagen ?? "")
-            let processor = DownsamplingImageProcessor(size: nibView.imageView.bounds.size)
-
-            nibView.imageView.kf.indicatorType = .activity
-            nibView.imageView.kf.setImage(
+            let processor = DownsamplingImageProcessor(size: accessoryView.imageView.bounds.size)
+            let viewModel = FurgoperfectoViewModel(id: (annotation.furgoperfecto?.id)!,
+                                                   name: (annotation.furgoperfecto?.nombre)!,
+                                                   description: "",
+                                                   distance: "",
+                                                   imageURL: url!)
+            accessoryView.delegate = self
+            accessoryView.imageView.kf.indicatorType = .activity
+            
+            accessoryView.apply(state: viewModel)
+            accessoryView.imageView.kf.setImage(
                 with: url,
                 placeholder: nil,
                 options: [
@@ -65,8 +74,8 @@ extension MapViewController: MKMapViewDelegate {
                 }
             }
 
-            nibView.translatesAutoresizingMaskIntoConstraints = false
-            return nibView
+            accessoryView.translatesAutoresizingMaskIntoConstraints = false
+            return accessoryView
         }
         return nil
     }
@@ -97,5 +106,12 @@ extension MapViewController: MKMapViewDelegate {
                 mapView.setRegion(viewRegion, animated: true)
             }
         }
+    }
+}
+
+extension MapViewController: FurgoperfectoMapAccessoryViewDelegate {
+    func moreInfoButtonPushed(state: FurgoperfectoViewModel) {
+        let vc = UIHostingController(rootView: FurgoperfectosDetailView(state: state))
+        present(vc, animated: true, completion: nil)
     }
 }
